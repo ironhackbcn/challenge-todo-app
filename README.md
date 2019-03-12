@@ -45,7 +45,6 @@ Fork and clone [the api](https://github.com/ironhackbcn/challenge-todo-api) repo
 Run the following commands:
 ```
 cd challenge-todo-app
-npm install
 npm start
 ```
 
