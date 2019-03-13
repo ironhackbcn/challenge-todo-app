@@ -1,7 +1,7 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
 # React Todo-list challenge
-## < Frontend Test 01>
+## < Frontend Test >
 
 ## What is this about:
 ----
@@ -21,7 +21,7 @@
 
 ## What we want you to do
 ---
-We want you to start simple and focus on a working product. At the same time this challenge has no limitations and we encourage you to be creative in terms of functionality and style.
+We want you to start simple and focus on a working product. At the same time this challenge has no limitations and we encourage you to be creative in terms of functionality and style (includes frontend and backend).
 
 ---
 ### Example User stories
@@ -52,12 +52,16 @@ npm start
 
 ## Delivery requirements
 ---
+- Push your application to GitHub and make a pull request at required time.
 - The application should include connection between the backend and the frontend.
 - It should show a list of todos/tasks
 - It should include a form to add todos/tasks
 - I should be working.
+- The solution must run properly and a text file with any instruction required for compiling and/or running. It should be provided as it would be directed to a no technical user.
 
 ## Delivery extra (not required)
-- CRUD
+- Complete CRUD
 - Any kind of look & feel or usability improvement for showing your ability/experience in making attractive UI/UX will be evaluated.
 - Any extra comment explaining about what was done or what the candidate would had wanted to improve but didn’t due to lack of time, will be appreciated and evaluated.
+
+## 🤩 Good Luck! 🤩
