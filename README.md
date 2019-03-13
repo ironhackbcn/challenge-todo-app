@@ -56,8 +56,8 @@ npm start
 - The application should include connection between the backend and the frontend.
 - It should show a list of todos/tasks
 - It should include a form to add todos/tasks
-- I should be working.
-- The solution must run properly and a text file with any instruction required for compiling and/or running. It should be provided as it would be directed to a no technical user.
+- The solution must run properly
+- A text file with any instruction required for compiling and/or running the application should be provided as it would be directed to a no technical user.
 
 ## Delivery extra (not required)
 - Complete CRUD
