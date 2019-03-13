@@ -30,7 +30,7 @@ We want you to start simple and focus on a working product. At the same time thi
 - **Delete todo** As a user I want to delete a todo from the list when I don't want it anymore.
 
 ### Backlog
-- **Update todo** A a user I want to be able to modify an existin todo.
+- **Update todo** A a user I want to be able to modify an existing todo.
 - **Done** As a user I want to mark my todo as done.
 - **Move todos** As a user I want to rearrange my todos.
 - etc...
@@ -53,7 +53,7 @@ You will get intstuctions about installation and how to access the Todo REST api
 
 ## Delivery requirements
 ---
-- Push your application to GitHub and make a pull request at required time.
+- Push your application to GitHub and send the repository url on Slack.
 - The application should include connection between the backend and the frontend.
 - It should show a list of todos/tasks.
 - It should include a form to add todos/tasks.
