@@ -38,15 +38,16 @@ We want you to start simple and focus on a working product. At the same time thi
 ## Provided material
 ---
 
-You will get intstuctions for installing a server with access to the Todo REST api.
-
-Fork and clone [the api](https://github.com/ironhackbcn/challenge-todo-api) repo and then, fork and clone this repository.
-
-Run the following commands:
+- Fork and clone this repository.
+- Run the following commands:
 ```
 cd challenge-todo-app
 npm start
 ```
+
+- Fork and clone [the server](https://github.com/ironhackbcn/challenge-todo-api) repository
+
+You will get intstuctions about installation and how to access the Todo REST api.
 
 ---
 
