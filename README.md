@@ -47,7 +47,7 @@ npm start
 
 - Fork and clone [the server](https://github.com/ironhackbcn/challenge-todo-api) repository
 
-You will get intstuctions about installation and how to access the Todo REST api.
+You will get intstuctions about installation and how to access the Todo REST api there.
 
 ---
 
