@@ -9,15 +9,15 @@
 
 ## What we’ll evaluate
 ----
-- Final product.
+- The final product.
 - The use of ES6 features is allowed and encouraged.
 - The use of CSS processors (Sass, LESS...) is allowed and encouraged.
 - The following are a bonus points for the candidate:
-  ✓ Code quality
-  ✓ Mobile support
-  ✓ Application structure
-  ✓ User Interface
-  ✓ Planning session ( README, Kanban etc.. )
+  - ✓ Code quality
+  - ✓ Mobile support
+  - ✓ Application structure
+  - ✓ User Interface
+  - ✓ Planning session ( README, Kanban etc.. )
 
 ## What we want you to do
 ---
