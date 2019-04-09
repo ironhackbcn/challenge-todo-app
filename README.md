@@ -42,6 +42,7 @@ We want you to start simple and focus on a working product. At the same time thi
 - Run the following commands:
 ```
 cd challenge-todo-app
+npm install
 npm start
 ```
 
