@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -31,3 +33,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+.list-todos {
+  width: 90%;
+}
+.todo-card {
+  margin: 15px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
