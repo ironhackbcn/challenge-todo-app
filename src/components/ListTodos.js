@@ -16,27 +16,35 @@ class ListTodos extends Component {
     })
   }
 
+  deleteTodo=(id)=>{
+    TodoServices.deleteOne(id)
+    .then(()=> this.getAll())
+  }
+
   componentDidMount(){
     this.getAll()
   }
  
   render(){
     return(
-      <div>
-      <AddOne updateList={this.getAll}/>
-      {
-        this.state.allTodos?
-        this.state.allTodos.map((todo)=>{
-          return(
-          <div key={todo._id}>
-            <h3>{todo.title}</h3>
-            <p>{todo.body}</p>
-          </div>
-          )
-        })
-        :
-        <h1>No todos to display yet</h1>
-      }
+      <div className= 'container'>
+        <AddOne updateList={this.getAll}/>
+        <div className='todos'>
+          {
+            this.state.allTodos?
+            this.state.allTodos.map((todo)=>{
+              return(
+              <div key={todo._id} className='todo'>
+                <h3>{todo.title}</h3>
+                <p>{todo.body}</p>
+                <button onClick={()=>this.deleteTodo(todo._id)}>X</button>
+              </div>
+              )
+            })
+            :
+            <h1>No todos to display yet</h1>
+          }
+        </div>
       </div>
     )
   }

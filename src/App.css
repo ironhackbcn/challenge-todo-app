@@ -1,33 +1,58 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+form{
+  width:500px;
+  height:300px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  padding:10px;
+  border:10px solid white;
+  border-radius: 30px;
+  background-image: linear-gradient(rgb(135, 217, 238), rgb(196, 227, 248))
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container{
+  display:flex;
+  height:90vh;
+  flex-direction:column;
+  align-items:center;
+  padding: 50px;
+  background-image: url('clouds.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+.todos{
+  display:flex;
+  flex-wrap: wrap;
+  width: 500px;
+  margin-top:50px;
+  border:3px solid white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.todo{
+  margin:10px;
+  border-radius: 30px;
+  padding:10px;
+  background-color: rgb(135, 217, 238);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  height: 100px;
+  justify-content: space-between;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.todo button{
+  background-color: white;
+  color: rgb(19, 138, 168);
+  border: none;
+  height:30px;
+  width:30px;
+  border-radius:50%;
+  font-weight:800;
+  padding: 10px;
 }
