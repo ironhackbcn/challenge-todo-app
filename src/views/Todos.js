@@ -3,7 +3,7 @@ import image from "../components/assets/bottom-img.png";
 import Form from "../components/Form";
 import Card from "../components/Card";
 
-import todoService from "../components/services/todoService";
+import todoService from "../services/todoService";
 
 class Todos extends Component {
   state = {

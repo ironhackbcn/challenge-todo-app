@@ -41,7 +41,13 @@
 }
 
 .single-todo a {
-  font-size: 2rem;
+  font-size: 1.3rem;
   pointer-events: none;
   cursor: default;
 }
+
+.single-todo p {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+}
+
