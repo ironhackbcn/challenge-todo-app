@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+
+.connect-btn{
+  background-color: rgb(4, 122, 181);
+  border-radius: 5px;
+  padding: 5px;
+  color: antiquewhite;
+}
+
+.style-input{
+  font-size: 1.3em;
+  padding: 5px;
+  border: 0;
+  border-bottom:1px solid rgb(4, 122, 181);
+}
