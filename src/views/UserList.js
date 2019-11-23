@@ -1,54 +1,31 @@
 import React, { Component } from 'react';
 import todoService from '../services/todoService';
 
-class TodoForm extends Component {
+class UserList extends Component {
   state = {
-    description: "",
-    title: "",
-    submitted: false,
+    tasks: [],
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const { description, title } = this.state
-    todoService.postTodo({ description, title });
-    this.reset();
+  componentDidMount = () => {
+    const tasks = todoService.getAllTodos();
+    console.log(tasks);
   }
-
-  handleChange = (e) => {
-    const value = e.target.value;
-    const name = e.target.name;
-    this.setState({
-      [name]: value,
-    })
-  }
-
-  reset = () => {
-    this.setState({
-      description: "",
-      title: "",
-      submitted: false,
-    })
-  }
-
 
   render() {
-    const { description, title } = this.state;
+    const { tasks } = this.state;
     return (
-      <div className="form">
-        <form onSubmit={this.handleSubmit}>
-          <h2>What's your next task?</h2>
-          <label>Title</label>
-          <input type="text" name="title" value={title} onChange={this.handleChange}></input>
-
-          <label>Description</label>
-          <input type="text" name="description" value={description} onChange={this.handleChange}></input>
-
-          <button type="submit">Save task</button>
-        </form>
+      <div className="tasks">
+        {tasks.map(task => {
+          return (
+            <div className="task">
+              <h4>{task.title}</h4>
+              <p>{task.description}</p>
+            </div>
+          )
+        })}
       </div >
     );
   }
 }
 
-export default TodoForm;
+export default UserList;

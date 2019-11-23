@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
-import todoService from '../services/todoService';
+// import todoService from '../services/todoService';
 
 class TodoForm extends Component {
   state = {
-    description: "",
+    body: "",
     title: "",
     submitted: false,
+    tasks: [],
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { description, title } = this.state
-    todoService.postTodo({ description, title });
+    const newTask = {
+      title: this.state.title,
+      body: this.state.body,
+    }
+    this.setState({
+      tasks: [...this.state.tasks, newTask],
+      submitted: true,
+    });
+    // todoService.postTodo(this.state);
     this.reset();
   }
 
@@ -25,7 +33,7 @@ class TodoForm extends Component {
 
   reset = () => {
     this.setState({
-      description: "",
+      body: "",
       title: "",
       submitted: false,
     })
@@ -33,7 +41,7 @@ class TodoForm extends Component {
 
 
   render() {
-    const { description, title } = this.state;
+    const { description, title, tasks } = this.state;
     return (
       <div className="form">
         <form onSubmit={this.handleSubmit}>
@@ -42,9 +50,21 @@ class TodoForm extends Component {
           <input type="text" name="title" value={title} onChange={this.handleChange}></input>
 
           <label>Description</label>
-          <input type="text" name="description" value={description} onChange={this.handleChange}></input>
+          <input type="text" name="body" value={description} onChange={this.handleChange}></input>
 
           <button type="submit">Save task</button>
+
+          <h2>User tasks</h2>
+          <div className="tasks">
+            {tasks.map(task => {
+              return (
+                <div className="task">
+                  <h4>{task.title}</h4>
+                  <p>{task.body}</p>
+                </div>
+              )
+            })}
+          </div >
         </form>
       </div >
     );
