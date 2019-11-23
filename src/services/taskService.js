@@ -1,0 +1,39 @@
+import axios from 'axios';
+
+class TaskService {
+  constructor() {
+    this.axios = axios.create({
+      baseURL: 'http://localhost:4000/api/v1',
+    });
+  }
+
+  getAllTasks() {
+    return this.axios.get('/todos')
+      .then(({ data: tasks }) => tasks)
+  }
+
+  getSingleTask(id) {
+    return this.axios.get(`/tasks/${id}`)
+      .then(({ data: task }) => task);
+  }
+
+  addTask(body) {
+    return this.axios.post('/todos', body)
+      .then(({ data: task }) => task);
+  }
+
+  updateTask(task) {
+    return this.axios.put(`/todos/${task._id}`, task)
+      .then(({ data: task }) => task);
+  }
+
+  deleteTask(id) {
+    return this.axios.delete(`/todos/${id}`)
+      .then(({ data: tasks }) => tasks);
+  }
+
+}
+
+const taskService = new TaskService()
+
+export default taskService;
