@@ -10,6 +10,11 @@ class TodoService {
   createTodo(title) {
     return this.axios.post('/todos', { title }).then(({ data }) => data);
   }
+
+  // listar To Do
+  getAllTodo(title) {
+    return this.axios.get('/todos', { title }).then(({ data }) => data);
+  }
 }
 
 const toDoService = new TodoService();
