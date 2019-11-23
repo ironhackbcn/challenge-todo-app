@@ -19,6 +19,7 @@ class TaskService {
 
   // Data Params: title=[String]
   addTask(body) {
+    console.log(body)
     return this.axios.post('/todos', body)
       .then(({ data: task }) => task);
   }
@@ -33,7 +34,6 @@ class TaskService {
     return this.axios.delete(`/todos/${id}`)
       .then(({ data: tasks }) => tasks);
   }
-
 }
 
 const taskService = new TaskService()

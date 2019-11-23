@@ -7,8 +7,9 @@ class TaskAdd extends Component {
   };
 
   handleChange = event => {
+    const { task } = this.state;
     this.setState(
-      { [event.target.name]: event.target.value }
+      { task: { ...task, [event.target.name]: event.target.value } }
     );
   };
 
@@ -18,7 +19,7 @@ class TaskAdd extends Component {
     const { history: { push } } = this.props;
     taskService
       .addTask(task)
-      .then(() => { push(`/`) })
+      .then(() => { push(`/tasks`) })
       .catch(() => { })
   };
 

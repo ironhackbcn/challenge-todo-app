@@ -39,7 +39,6 @@ class TaskUpdate extends Component {
 
   render() {
     const { task: { title, body } } = this.state;
-
     return (
       <>
         <form onSubmit={this.handleSubmit}>

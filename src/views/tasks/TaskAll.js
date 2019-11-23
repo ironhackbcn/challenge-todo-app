@@ -20,7 +20,6 @@ class TaskAll extends Component {
 
   render() {
     const { tasks, loading } = this.state;
-
     return (
       <>
         <h1>Roll up your sleeves and work hard! These are your tasks:</h1>
