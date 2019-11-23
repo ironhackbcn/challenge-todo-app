@@ -6,10 +6,13 @@ class Navbar extends Component {
     return (
       <nav>
         <li>
-          <NavLink to="/">test</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
           <NavLink to="/tasks">Tasks to fullfill</NavLink>
+        </li>
+        <li>
+          <NavLink to="/add">Add a task</NavLink>
         </li>
       </nav>
     );

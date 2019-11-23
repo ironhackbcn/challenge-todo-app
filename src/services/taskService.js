@@ -17,11 +17,14 @@ class TaskService {
       .then(({ data: task }) => task);
   }
 
+  // Data Params: title=[String]
   addTask(body) {
+    console.log("hola")
     return this.axios.post('/todos', body)
       .then(({ data: task }) => task);
   }
 
+  // Data Params: title=[String]
   updateTask(task) {
     return this.axios.put(`/todos/${task._id}`, task)
       .then(({ data: task }) => task);
