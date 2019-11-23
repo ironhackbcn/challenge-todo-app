@@ -1,33 +1,148 @@
-.App {
+
+.home section {
+  min-height: 50vh;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.todo {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.todo section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.header {
+  padding: 20px 0 20px 0;
+}
+
+.header p {
+  font-size: 1.3rem;
+}
+
+.input {
+  padding-bottom: 50px;
+}
+
+#new-task {
+  width: 300px;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 35px;
+  
+}
+
+.container h2 {
+  font-size: 2.3rem;
+}
+
+#todo {
+  border-right: dotted 3px;
+}
+
+#todo h2 {
+  color: red;
+}
+
+#done h2 {
+  color: green;
+}
+
+#done a {
+  text-decoration:line-through;
+}
+
+.bottom-img {
+  margin-top: 30px;
+}
+
+.button {
+  text-align: center;
+  width: 80px;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
   color: white;
+  text-decoration: none;
+  background: #64b3f4;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 12px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background: #c2e59c;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-medium {
+  text-align: center;
+  width: 250px;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #64b3f4;
+  padding: 15px;
+  border-radius: 30px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.button-mdium:hover {
+  background: #c2e59c;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.button-large {
+  text-align: center;
+  width: 450px;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #64b3f4;
+  padding: 30px;
+  margin-top: 150px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.button-large:hover {
+  background: #c2e59c;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
