@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import taskService from '../../services/taskService';
+import { Link } from 'react-router-dom';
 
 class TaskAll extends Component {
   state = {
@@ -26,8 +27,7 @@ class TaskAll extends Component {
         {!loading && tasks.map((task) => {
           return (
             <div key={task._id}>
-              <p>{task.title}</p>
-              <p>{task.body}</p>
+              <Link to={`/tasks/${task._id}`}>{task.title}</Link>
             </div>
           )
         })}

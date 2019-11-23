@@ -13,7 +13,7 @@ class TaskService {
   }
 
   getSingleTask(id) {
-    return this.axios.get(`/tasks/${id}`)
+    return this.axios.get(`/todos/${id}`)
       .then(({ data: task }) => task);
   }
 
