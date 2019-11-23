@@ -19,7 +19,6 @@ class TaskService {
 
   // Data Params: title=[String]
   addTask(body) {
-    console.log("hola")
     return this.axios.post('/todos', body)
       .then(({ data: task }) => task);
   }

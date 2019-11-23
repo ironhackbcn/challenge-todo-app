@@ -20,13 +20,25 @@ class TaskSingle extends Component {
     } catch (error) { }
   }
 
+  deleteTask = () => {
+    const { params } = this.props.match;
+    taskService
+      .deleteTask(params.id)
+      .then(() => { this.props.history.push("/tasks"); })
+      .catch(err => { });
+  };
+
   render() {
     const { task, loading } = this.state;
     return (
       <>
         {loading && <div>Loading...</div>}
-        {!loading && <div><TaskCard task={task} />
-          <Link to={`/tasks/${task._id}/update`}>Edit</Link></div>}
+        {!loading && <div>
+          <TaskCard task={task} />
+          <Link to={`/tasks/${task._id}/update`}>Edit</Link>
+          <br></br>
+          <Link onClick={() => this.deleteTask()}>Delete</Link>
+        </div>}
       </>
     );
   }

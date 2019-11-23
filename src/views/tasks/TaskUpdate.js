@@ -18,7 +18,6 @@ class TaskUpdate extends Component {
 
   handleChange = event => {
     const { task } = this.state;
-    console.log(this.state)
     this.setState(
       {
         task: {
