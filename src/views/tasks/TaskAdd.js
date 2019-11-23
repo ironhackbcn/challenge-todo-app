@@ -27,7 +27,7 @@ class TaskAdd extends Component {
     const { task: { title, body } } = this.state;
     return (
       <>
-        <h1>You know you have loads of task - feel free to add them here:</h1>
+        <h1>You know you have loads of tasks - feel free to add them here:</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"

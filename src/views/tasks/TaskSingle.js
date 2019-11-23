@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import taskService from '../../services/taskService';
+import { Link } from 'react-router-dom';
 import TaskCard from './components/TaskCard';
 
 class TaskSingle extends Component {
@@ -24,7 +25,8 @@ class TaskSingle extends Component {
     return (
       <>
         {loading && <div>Loading...</div>}
-        {!loading && <TaskCard task={task} />}
+        {!loading && <div><TaskCard task={task} />
+          <Link to={`/tasks/${task._id}/update`}>Edit</Link></div>}
       </>
     );
   }
