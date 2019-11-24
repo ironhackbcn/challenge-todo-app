@@ -4,7 +4,8 @@ import todoService from '../services/todoService';
 class Form extends Component {
 
   state = {
-    todos: []
+    title: '',
+    body: ''
   }
 
   handleChange(event) {
