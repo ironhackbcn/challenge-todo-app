@@ -10,17 +10,57 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.App-header h1 {
+  margin-left: 20px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.inputContainer {
+  margin: 10px;
+}
+
+.tocontinue {
+  border: 1px solid black;
+  padding: 20px;
+  background: rgb(17, 47, 71);
+  border-radius: 50px;
+  margin-top: 100px;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+.actionbuttons button {
+  margin: 30px;
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cardContainer {
+  border: 1px solid black;
+  border-radius:25px;
+  box-shadow: 10px 5px 5px rgb(117, 107, 107);
+  margin: 10px 125px;
+  padding: 0 100px 25px 100px;
 }
 
 @keyframes App-logo-spin {
