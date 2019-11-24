@@ -1,0 +1,18 @@
+.todo-content{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.todo-card {
+  padding: 2px 16px;
+  display: flex;
+  flex: 1;
+
+  width: 80%;
+  border: 1px solid #555;
+  font: 14px Arial;
+}
+
+p{
+  width: 50%;
+}

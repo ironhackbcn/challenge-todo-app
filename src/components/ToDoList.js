@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import todoService from '../services/todoService';
+import '../css/todolist.css';
 
 class ToDoList extends Component {
   state = {
@@ -25,13 +26,13 @@ class ToDoList extends Component {
     return (
       <div className='todo-wrapper'>
         <div className='todo-content'>
-          <h1>todo list</h1>
           {
             !loading && todos.map((todo, key) => {
               return(
                 <div className='todo-card' key={`${todo._id} - ${key}`}>
-                  <h2>{todo.title}</h2>
+                  <p><strong>{todo.title}</strong></p>
                   <p>{todo.body}</p>
+                  <button>delete</button>
                 </div>
               )
             })
