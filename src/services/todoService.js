@@ -18,6 +18,11 @@ class TodoService {
         return this.todo.post('/todos', body)
             .then(({ data: todo }) => todo);
     }
+
+    removeToDo(id){
+        return this.todo.delete(`/todos/${id}`)
+            .then(({ data: todo }) => todo);
+    }
 }
 
 const todoService = new TodoService()

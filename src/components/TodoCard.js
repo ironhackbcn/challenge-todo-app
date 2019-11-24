@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Button from '../components/Button';
 
-class TodoCard extends Component {
-  render() {
-    return (
-      <div>
-        <h1>List of to-dos</h1>
+function TodoCard(props) {
+  const { key, title, body, remove } = props;
+  return (
+    <div>
+      <div className='todo-card' key={key} >
+        <p><strong>{title}</strong></p>
+        <p>{body}</p>
+        <Button myProp={remove}>
+          Delete
+        </Button>
+        {/* <button className='todo-button'  */}
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default TodoCard;

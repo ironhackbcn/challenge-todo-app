@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import todoService from '../services/todoService';
 import '../css/todolist.css';
+import TodoCard from '../components/TodoCard';
 
 class ToDoList extends Component {
   state = {
@@ -20,6 +21,12 @@ class ToDoList extends Component {
     }
   }
 
+  removeToDo = (todo) => {
+    const id = todo._id;
+    console.log('RECIBO  => ', id);
+    todoService.removeToDo(id);
+  }
+
   render() {
     const { todos, loading } = this.state;
 
@@ -27,12 +34,16 @@ class ToDoList extends Component {
       <div className='todo-wrapper'>
         <div className='todo-content'>
           {
-            !loading && todos.map((todo, key) => {
+            !loading && todos.map((todo, index) => {
+              console.log('PASO ===>>> ', todo );
               return(
-                <div className='todo-card' key={`${todo._id} - ${key}`}>
-                  <p><strong>{todo.title}</strong></p>
-                  <p>{todo.body}</p>
-                  <button>delete</button>
+                <div>
+                <TodoCard
+                  key = {`${todo._id}-${index}`}
+                  title = {todo.title}
+                  body = {todo.body}
+                  remove = {this.removeToDo.bind(this.state, todo)}
+                />
                 </div>
               )
             })
