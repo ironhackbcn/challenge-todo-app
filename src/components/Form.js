@@ -19,7 +19,6 @@ class Form extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     todoService.addNewTodo(this.state);
-    console.log("el state ", this.state)
 
     this.setState({
       title: '',
@@ -37,7 +36,7 @@ class Form extends Component {
           <label>Body</label>
           <input type="text" name="body" value={this.state.body} onChange={(e) => this.handleChange(e)} />
 
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Add" />
         </form>
       </div>
     );
