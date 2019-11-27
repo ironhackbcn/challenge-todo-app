@@ -18,7 +18,7 @@ const List = (props) => {
       <td>{props.status}</td>
       <td className="actions">
         <ButtonGroup aria-label="Basic example">
-          <LinkContainer to={ '/' + props.id }><Button variant="primary">View</Button></LinkContainer>
+          <LinkContainer to={ '/update/' + props.id }><Button variant="primary">Update</Button></LinkContainer>
           <Button variant="secondary">Mark Complete</Button> { /* TODO: Mark complete function */}
           <Button variant="danger" onClick={ () => tasks.delete(props.id) }>Delete</Button>
         </ButtonGroup>

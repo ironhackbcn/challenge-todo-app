@@ -13,6 +13,7 @@ import Topbar from './components/Topbar/Topbar';
 // Pages
 import Tasks from './pages/Tasks/Tasks';
 import View from './pages/Tasks/View';
+import Update from './pages/Tasks/Update';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Tasks} />
             <Route exact path="/:id" component={View} />
+            <Route exact path="/update/:id" component={Update} />
           </Switch>
         </Container>
       </>
