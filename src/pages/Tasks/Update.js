@@ -16,7 +16,7 @@ class Update extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      id: this.props.match.params,
+      id: this.props.match.params.id,
       title: '',
       body: ''
     }
@@ -30,6 +30,7 @@ class Update extends Component {
       title,
       body
     } = this.state;
+    console.log(id)
 
     // Call task update API
     await tasks.update({
