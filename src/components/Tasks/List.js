@@ -16,7 +16,7 @@ const List = (props) => {
     <tr>
       <td><Link to={ '/' + props.id }>{props.title}</Link></td>
       <td>{props.status}</td>
-      <td>
+      <td className="actions">
         <ButtonGroup aria-label="Basic example">
           <LinkContainer to={ '/' + props.id }><Button variant="primary">View</Button></LinkContainer>
           <Button variant="secondary">Mark Complete</Button> { /* TODO: Mark complete function */}

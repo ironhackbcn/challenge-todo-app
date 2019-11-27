@@ -43,6 +43,6 @@
   margin-top: 20px;
 }
 
-.actions .btn {
-  padding: 10px;
+.actions {
+  text-align: right;
 }

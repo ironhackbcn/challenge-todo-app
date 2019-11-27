@@ -65,7 +65,7 @@ class Tasks extends Component {
     // Close Modal and return to Tasks list
     this.hideModal();
     // TODO: Not realoading the state in time, can't see new issues without reloading
-    this.props.history.push('/tasks');
+    this.props.history.push('/');
   }
 
   // Form change handler
@@ -106,7 +106,7 @@ class Tasks extends Component {
               <tr>
                 <th>Title</th>
                 <th>Status</th>
-                <th>Actions</th>
+                <th className="actions">Actions</th>
               </tr>
             </thead>
             <tbody>
