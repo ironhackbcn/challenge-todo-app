@@ -3,22 +3,30 @@ import React, { Component } from 'react'
 // API service
 import tasks from '../../lib/api-service';
 
+// Components
+import List from '../../components/Tasks/List';
+
 // Bootstrap Components
 import {
   Container,
   Row,
   Form,
   Button,
-  Modal
+  Modal,
+  Table
 } from 'react-bootstrap';
 
 class Tasks extends Component {
-  state = {
-    tasks: [],
-    title: '',
-    body: '',
-    show: false
+  constructor (props) {
+    super(props);
+    this.state = {
+      tasks: [],
+      title: '',
+      body: '',
+      show: false
+    }
   }
+  
 
   // Show Task Creation modal
   showModal = () => {
@@ -53,14 +61,29 @@ class Tasks extends Component {
       title: '',
       body: ''
     });
-    // Return to Tasks list
-    this.props.history.push('/tasks')
+
+    // Close Modal and return to Tasks list
+    this.hideModal();
+    // TODO: Not realoading the state in time, can't see new issues without reloading
+    this.props.history.push('/tasks');
   }
 
   // Form change handler
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
+  }
+
+  componentDidMount () {
+    // Call tasks list API
+    tasks.list().then(
+      response => {
+        const tasks = response.data;
+        if (tasks.length > 0) {
+          this.setState({ tasks });
+        }
+      }
+    ).catch(error => console.log(error));
   }
 
   render () {
@@ -77,8 +100,29 @@ class Tasks extends Component {
           <Button onClick={this.showModal}>Create Task</Button>
         </Row>
 
-        <Row>
-          List Tasks here
+        <Row className="task-list">
+          <Table responsive className="table" striped hover>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                this.state.tasks.map((task, index) =>
+                  <List
+                    key = { index }
+                    id = { task._id }
+                    title = { task.title }
+                    description = { task.description }
+                    status = { task.status }
+                  />
+                )
+              }
+            </tbody>
+          </Table>
         </Row>
 
         { /* Task Creation Modal */ }
@@ -116,13 +160,13 @@ class Tasks extends Component {
             <Button variant="secondary" onClick={this.hideModal}>
               Cancel
             </Button>
-            <Button variant="primary" onClick={this.hideModal}>
+            <Button variant="primary" type="submit" form="createTask" disabled={!title}>
               Save
             </Button>
           </Modal.Footer>
         </Modal>
       </Container>
-    )
+    );
   }
 }
 

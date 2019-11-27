@@ -22,7 +22,7 @@ const Topbar = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  )
+  );
 }
 
 export default Topbar;

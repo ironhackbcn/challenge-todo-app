@@ -38,3 +38,11 @@
   align-items: center;
   margin-top: 20px;
 }
+
+.task-list {
+  margin-top: 20px;
+}
+
+.actions .btn {
+  padding: 10px;
+}
