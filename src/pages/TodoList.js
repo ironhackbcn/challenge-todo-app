@@ -55,6 +55,7 @@ class TodoList extends Component {
                 <p> <strong>body</strong></p>
                 <p>{todo.body}</p>
                 <button onClick={()=>this.handleDeleteClick(todo._id)}>Delete</button>
+                <button><Link to={`/edit/${todo._id}`}>Edit TAsk</Link></button>
                 </div>
             ))
             }
