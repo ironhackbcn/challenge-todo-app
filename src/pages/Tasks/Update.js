@@ -16,6 +16,7 @@ class Update extends Component {
   constructor (props) {
     super(props);
     this.state = {
+      id: this.props.match.params,
       title: '',
       body: ''
     }
@@ -25,12 +26,14 @@ class Update extends Component {
   handleFormSubmit = async (event) => {
     event.preventDefault();
     const {
+      id,
       title,
       body
     } = this.state;
 
     // Call task update API
     await tasks.update({
+      id,
       title,
       body
     });
