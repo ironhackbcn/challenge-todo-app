@@ -1,54 +1,35 @@
 import axios from 'axios';
 
-class TodoService{
-    constructor(){
-        this.todoApi= axios.create({
-            baseURL: 'http://localhost:4000/api/v1'
-        })
+class TodoService {
+    constructor() {
+      this.todo = axios.create({
+        baseURL: 'http://localhost:4000/api/v1',
+      });
     }
-    getAllTodos = async()=>{
-        try{
-            const todos= await this.todoApi.get('/todos')
-            return todos.data
-        } catch(error){
-            console.log(error)
-        }
+  
+    getAllTodos() {
+      return this.todo.get("/todos").then(response => response);
     }
-
-    getOneTodo = async(todoId)=>{
-        try{
-            const oneTodo = await this.todoApi.get(`/todos/${todoId}`)
-            return oneTodo.data
-        } catch(error){
-            console.log(error)
-        }
+  
+    createTodo(newTodo) {
+      return this.todo.post("/todos", newTodo).then(response => response);
     }
-
-
-    createTodo = async(newTodo) =>{
-        const { title, body } = newTodo;
-        try{
-            const createOneTodo= await this.todoApi.post('/todos', {title,body})
-            return createOneTodo.data
-        } catch(error){
-            console.log(error)
-        }
+  
+    getTodo(id) {
+      return this.todo.get(`/todos/${id}`).then(response => response);
     }
-    updatedTodo = async (todoId, editedTodo) =>{
-        try{
-            const updatedTodo = await this.todoApi.put(`/todos/${todoId}`, editedTodo)
-            return updatedTodo.data
-        }
-        catch(error){
-            console.log(error)
-        }
+  
+    updateTodo(id, updateTodo) {
+      return this.todo
+        .put(`/todos/${id}`, updateTodo)
+        .then(response => response);
     }
-    deleteTodo= async(todoId)=>{
-       return this.todoApi.delete(`/todos/${todoId}`)
-       .then(response=>response.data)
+  
+    deleteTodo(id) {
+      return this.todo.delete(`/todos/${id}`).then(response => response);
     }
-
-}
-
-const todoService = new TodoService ()
-export default todoService
+  }
+  
+  const todoService = new TodoService();
+  
+  export default todoService;
