@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import todoService from '../service/todoService';
 
+//form para añadir nuevos todos
+
  class TodoCreateForm extends Component {
      _isMounted = false
      state={
@@ -50,7 +52,7 @@ import todoService from '../service/todoService';
                     <input type="text" name='body' value={body}  onChange={this.handleChange} placeholder='body'/>
                 </div>
                 <div className='inp-lab'>
-                    <input type="submit" value="Create" />
+                    <input type="submit" value="Add a new todo" className='add-btn'/>
                 </div>
             </form>
         )

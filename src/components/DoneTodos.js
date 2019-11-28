@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import todoService from '../service/todoService'
-import {Link} from 'react-router-dom'
+
 import TodoCard from './TodoCard';
+
+//renderiza los todos que ya están completados
 
  class DoneTodos extends Component {
      _isMounted = false;
@@ -16,12 +18,12 @@ import TodoCard from './TodoCard';
         .then(response => {
             const reverseResponse = response.reverse()
             const filteredTodos = reverseResponse.filter(todo =>{
-                console.log(todo)
+              //  console.log(todo)
                 if(todo.done === 'true'){    
                     return todo
                 }
             })
-            console.log(filteredTodos)
+          //  console.log(filteredTodos)
            this.setState({ todosCopy: filteredTodos});
         })
         .catch(err => {
@@ -35,7 +37,8 @@ import TodoCard from './TodoCard';
        // console.log(todos)
 
         return (
-            <div>
+            <div className='todos-container'>
+                <h1 className='done'>DONE! :)</h1>
                 {
                     todosCopy ?
                     todosCopy.map((todo, index)=>{

@@ -3,6 +3,8 @@ import todoService from '../service/todoService'
 
 import TodoCard from './TodoCard';
 
+//renderiza los todos que aun no están completados
+
  class AllTodos extends Component {
      _isMounted = false;
 
@@ -16,12 +18,12 @@ import TodoCard from './TodoCard';
         .then(response => {
             const reverseResponse = response.reverse()
             const filteredTodos = reverseResponse.filter(todo =>{
-                console.log(todo)
+               // console.log(todo)
                 if(todo.done === 'false'){    
                     return todo
                 }
             })
-            console.log(filteredTodos)
+           // console.log(filteredTodos)
            this.setState({ todosCopy: filteredTodos});
         })
         .catch(err => {
@@ -35,8 +37,8 @@ import TodoCard from './TodoCard';
        // console.log(todos)
 
         return (
-            <div>
-                
+            <div className='todos-container'>
+                <h1 className='not'>NOT DONE :(</h1>
 
                 {
                     todosCopy ?

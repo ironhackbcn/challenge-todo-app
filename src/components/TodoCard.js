@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Moment from 'moment';
 import todoService from '../service/todoService';
 
-
+//Card para cada uno de los todos, renderiza la información y un boton de delete y uno de done por cada uno de ellos 
 class TodoCard extends Component {
 
     handleDeleteTodo = event =>{
@@ -23,12 +23,16 @@ class TodoCard extends Component {
 
     render() {
         return (
-            <div>
+            <div className='card-container'>
                 <h2> {this.props.todo.title} </h2>
                 <p>{Moment(this.props.todo.createdAt).format('L')}</p>
-                <p> {this.props.todo.body} </p>
+                <p className='content'> {this.props.todo.body} </p>
+                <div className='btn-container'>
                 <input type="submit" value='delete' onClick={this.handleDeleteTodo}/>
-                <input type="submit" value='done' onClick={this.handleDoneTodo}/>
+                {this.props.todo.done === 'false' ? 
+                <input type="submit" value='done' onClick={this.handleDoneTodo}/> : null
+                }
+                </div>
             </div>
         )
     }

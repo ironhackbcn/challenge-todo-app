@@ -11,9 +11,10 @@ export default class TodosLists extends Component {
         return (
             <>
                 <header>
-                    <h1><span>Todo</span> List</h1>
+                    <h1><span>TODO</span> List</h1>
+                    <TodoCreateForm/>
                 </header>
-                <TodoCreateForm/>
+                
                 <div className='todos-list-container'>
                     <NotDoneTodos/>
                     <DoneTodos/>
