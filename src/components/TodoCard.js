@@ -9,16 +9,26 @@ class TodoCard extends Component {
         
         event.preventDefault()
         const{todo} = this.props
-        console.log(todo)
+      //  console.log(todo)
         todoService.deleteTodo(todo._id)
     }
+
+    handleDoneTodo = event => {
+        event.preventDefault()
+
+        const{todo} = this.props
+
+        todoService.updateDone(todo._id)
+    }
+
     render() {
         return (
             <div>
-                <h1> {this.props.todo.title} </h1>
+                <h2> {this.props.todo.title} </h2>
                 <p>{Moment(this.props.todo.createdAt).format('L')}</p>
                 <p> {this.props.todo.body} </p>
                 <input type="submit" value='delete' onClick={this.handleDeleteTodo}/>
+                <input type="submit" value='done' onClick={this.handleDoneTodo}/>
             </div>
         )
     }

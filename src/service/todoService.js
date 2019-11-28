@@ -37,6 +37,12 @@ class Todo {
           .then(({data}) => data);
     }
 
+    updateDone(todoId){
+        return this.todo
+            .put(`/todos/done/${todoId}`)
+            .then(({data}) => data);
+    }
+
 }
 
 const todoService = new Todo();

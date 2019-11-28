@@ -1,20 +1,28 @@
 import React, { Component } from 'react'
 import todoService from '../service/todoService'
-import {Link} from 'react-router-dom'
-import TodoCard from '../components/TodoCard';
+
+import TodoCard from './TodoCard';
 
  class AllTodos extends Component {
      _isMounted = false;
 
      state={
-         todos: null
+         todos: null,
+         todosCopy: null
      }
      componentDidMount(){
         this._isMounted = true
         todoService.getAllTodos()
         .then(response => {
-          //  console.log(response)
-           this.setState({ todos: response});
+            const reverseResponse = response.reverse()
+            const filteredTodos = reverseResponse.filter(todo =>{
+                console.log(todo)
+                if(todo.done === 'false'){    
+                    return todo
+                }
+            })
+            console.log(filteredTodos)
+           this.setState({ todosCopy: filteredTodos});
         })
         .catch(err => {
             console.log("Error finding todos ", err);
@@ -23,17 +31,16 @@ import TodoCard from '../components/TodoCard';
 
     render() {
 
-        const {todos} = this.state
+        const { todosCopy} = this.state
        // console.log(todos)
 
         return (
             <div>
-                This is all todos list view
-                <Link to='/create'>Add a new Todo</Link>
+                
 
                 {
-                    todos?
-                    todos.map((todo, index)=>{
+                    todosCopy ?
+                    todosCopy.map((todo, index)=>{
                         return (
                             < TodoCard todo= {todo} key = {index}/>
                         )
