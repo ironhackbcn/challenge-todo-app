@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f12711, #f5af19); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f12711, #f5af19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height:100vh;
+  width:100vw;
+  margin-top:0;
+  font-family:'Lato', sans-serif;
 }
 
 .App-logo {
@@ -22,6 +29,56 @@
 .App-link {
   color: #61dafb;
 }
+
+#title {
+  margin-top:0;
+  padding-top:12vh;
+  padding-bottom:5vh;
+}
+
+#italics {
+  font-style: italic;
+}
+
+.task-btn {
+  padding:0.9em;
+  border:1px solid black;
+  background-color:transparent;
+  cursor:pointer;
+}
+
+.task-input {
+  background-color:transparent;
+  padding:0.5em;
+  border-bottom:1px solid black;
+  border-top:none;
+  border-right:none;
+  border-left:none;
+  margin-right:1em;
+  font-size:1em;
+}
+
+#update-btn {
+  margin-bottom:5vh;
+  display:block;
+  margin:1em auto;
+}
+
+#todoList {
+  margin-top:2.5em;
+}
+
+#update-form {
+  display:none;
+  margin:1em auto;
+}
+
+#update-input {
+  display:none;
+  margin:1em auto;
+  text-align:center;
+}
+
 
 @keyframes App-logo-spin {
   from {
