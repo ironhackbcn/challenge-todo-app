@@ -1,33 +1,89 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+body {
+  background-image: url('https://previews.123rf.com/images/pudiq/pudiq1408/pudiq140800002/30536869-corkboard-texture-pattern.jpg');
 }
 
-.App-link {
-  color: #61dafb;
+.topbar {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.7vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100vw;
+  flex-wrap: wrap;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titlecard {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQwAAAC8CAMAAAC672BgAAAAXVBMVEX///9Ti8/s8/rk7viBpNiUteBfkdKQrtzR4fN1ntZnltTy+Py7zupwm9XD2O+lu+GEq9zf5vPR3PCpw+VNh86wx+fh6fWRs9+gvePr8/rB1u6du+KAqdvZ5fRjk9PkweQPAAAA+UlEQVR4nO3caW7CMBCAUcfpQiHQJQshAe5/zEqWVfUGEynvXWG+PyONndahoRjWBAAAsAXjC9WY8tRSTDk6TAAA2LPph2pK3fWV4tpFhwkAAFDMb1Rz9CwAAACK7p2qS+2Bqo0OEwAA9ixHPw3bjpz68wfFuY8OEwAAoJifR4rnnE78iQ4TAAD27NJTXdKhozpEhwkAAHt2umWK2yn1xzPF0R0oAACwDXMT/Q3nVjTuQP+J7hIAAHbtsVwolkdaPqmW6DABAACKtaFao2cBAABQjPcvivuY8jdVjg4TAAD2rH1QtWmMXha3Y4wOEwAAoFiH6PPLrRjWXwNYD2/uP4goAAAAAElFTkSuQmCC');
+  padding-left: 2vw;
+  padding-right: 2vw;
+  max-width: 250px;
+  width: 70vw;
+  letter-spacing: 0.5vw;
+  margin-top: 20px;
+}
+.addcard {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQwAAAC8CAMAAAC672BgAAAAXVBMVEX///9Ti8/s8/rk7viBpNiUteBfkdKQrtzR4fN1ntZnltTy+Py7zupwm9XD2O+lu+GEq9zf5vPR3PCpw+VNh86wx+fh6fWRs9+gvePr8/rB1u6du+KAqdvZ5fRjk9PkweQPAAAA+UlEQVR4nO3caW7CMBCAUcfpQiHQJQshAe5/zEqWVfUGEynvXWG+PyONndahoRjWBAAAsAXjC9WY8tRSTDk6TAAA2LPph2pK3fWV4tpFhwkAAFDMb1Rz9CwAAACK7p2qS+2Bqo0OEwAA9ixHPw3bjpz68wfFuY8OEwAAoJifR4rnnE78iQ4TAAD27NJTXdKhozpEhwkAAHt2umWK2yn1xzPF0R0oAACwDXMT/Q3nVjTuQP+J7hIAAHbtsVwolkdaPqmW6DABAACKtaFao2cBAABQjPcvivuY8jdVjg4TAAD2rH1QtWmMXha3Y4wOEwAAoFiH6PPLrRjWXwNYD2/uP4goAAAAAElFTkSuQmCC');
+  padding-left: 2vw;
+  padding-right: 2vw;
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+  width: 70vw;
+  margin-top: 20px;
+}
+.addcard form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.addcard div {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+.card {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: #F8EC79;
+  max-width: 270px;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 70vw;
+  max-height: 270px;
+  font-family: 'Patrick Hand', cursive;
+}
+.card hr {
+  max-width: 240px;
+  width: 70vw;
+}
+.card h1 {
+  padding: 0;
+  margin: 0;
+}
+.card a {
+  color: red;
+  text-decoration: none;
+  display: flex;
+  font-weight: bolder;
+  font-size: 1.5vw;
 }
