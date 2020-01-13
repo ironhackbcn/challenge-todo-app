@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import  CreateToDo from './components/CreateToDo'
+import  ShowToDo from './components/ShowToDo'
+import ToDo from './lib/Todo'
 
 class App extends Component {
+  state={
+  }
+  getAllToDo=()=>{
+  ToDo.getAll()
+  .then((result) => {
+      this.setState({list: result.data})
+  }).catch((err) => {
+  });
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <CreateToDo getAll={this.getAllToDo}/>
+      <ShowToDo getAll={this.getAllToDo}/>
       </div>
     );
   }

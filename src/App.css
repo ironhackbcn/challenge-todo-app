@@ -31,3 +31,36 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: black;
+  color: aliceblue;
+}
+button{
+  background-color: transparent;
+  border: 1px solid wheat;
+  border-radius: 4px;
+  color: aliceblue;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.todos{
+border: 1px solid white;
+border-radius: 4px;
+width: 50%;
+margin: 0 auto;
+margin-bottom: 10px;
+margin-top: 20px;
+color: bisque;
+}
+form{
+  margin-top: 50px;
+}
+label{
+  display: block;
+}
+.add{
+margin-top: 5px;
+width: 12em;
+}
