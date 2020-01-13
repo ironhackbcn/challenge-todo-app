@@ -31,3 +31,8 @@
     transform: rotate(360deg);
   }
 }
+
+.createToDoContainer {
+  display: flex;
+  flex-direction: column;
+}
