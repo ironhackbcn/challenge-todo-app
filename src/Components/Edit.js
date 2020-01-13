@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class Edit extends Component {
   state = {
@@ -15,12 +16,13 @@ class Edit extends Component {
   };
 
   updateTodo = () => {
-    
     const id = this.props.match.params.id;
-    console.log(this.state);
+    console.log(id);
     
+    console.log(this.state);
+
     axios
-      .post(`http://localhost:4000/api/v1/todos/${id}`, this.state)
+      .put(`http://localhost:4000/api/v1/todos/${id}`, this.state)
       .then(response => {
         console.log("update task");
       })
@@ -31,9 +33,19 @@ class Edit extends Component {
     });
   };
 
+  componentDidMount() {
+    const id = this.props.match.params.id;
+    console.log(id);
+  }
+
   render() {
     return (
       <div>
+        <div>
+          <button>
+            <Link to={`/`}>Index page</Link>
+          </button>
+        </div>
         <form className="form-addtodo" onSubmit={this.updateTodo}>
           <label> Title of a task to do </label>
           <input
@@ -46,8 +58,8 @@ class Edit extends Component {
           <label>Message of the task</label>
           <textarea
             className="form-control"
-            name="message"
-            value={this.state.message}
+            name="body"
+            value={this.state.body}
             onChange={this.handleInput}
             rows="5"
           ></textarea>

@@ -13,7 +13,7 @@ class App extends Component {
          <h2>Page TODO</h2> 
          <Switch>
          <Route  exact path="/" component={ List }/>
-         <Route  path="/editTask" component={ Edit }/>
+         <Route  path="/editTask/:id" component={ Edit }/>
 
          </Switch>
       </div>

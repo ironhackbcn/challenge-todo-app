@@ -102,9 +102,9 @@ class List extends Component {
                   <Link
                     to={`/editTask/${todo._id}`}
                     key={todo._id}
-                    className="card-link"
+                    className="task"
                   >
-                    Details
+                    Edit
                   </Link>
                 </div>
                 <button
