@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  text-align: center;
+}
+
+.todocard {
+  margin-top: 25px;
+  width: 500px;
+  border: 1px solid black;
+  
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+
