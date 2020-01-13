@@ -14,6 +14,6 @@
 
 ## 
 
-In order to run the application clone the repository (and server) and run npm i to install packages and then npm start on the front end and server to start the application.
+In order to run the application clone the repository (and server: https://github.com/Rosebeatty/challenge-todo-api) and run npm i to install packages and then npm start on the front end and server to start the application.
 
 Trello Link: https://trello.com/b/NaqKv1Ul/todo-list-app
