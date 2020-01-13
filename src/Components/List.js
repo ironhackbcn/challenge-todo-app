@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class List extends Component {
   state = {
@@ -15,6 +16,7 @@ class List extends Component {
     this.setState({ [name]: value });
   };
 
+  //   Add to do to the databse
   createTodo = () => {
     axios
 
@@ -30,6 +32,7 @@ class List extends Component {
     });
   };
 
+  //   All list of TODO
   getTodo = () => {
     axios
       .get(`http://localhost:4000/api/v1/todos`)
@@ -42,8 +45,14 @@ class List extends Component {
       .catch(err => console.log(err));
   };
 
-  removeOwnCoin = id => {
-    axios.post(`http://localhost:4000/api/v1/todos/${id}`);
+  removeTodo = id => {
+    axios
+      // It is done it with Delete because it is the same way in the backend
+      .delete(`http://localhost:4000/api/v1/todos/${id}`)
+      .then(() => {
+        console.log("Remove it");
+      })
+      .catch(err => console.log(err));
 
     this.setState({
       listtodo: this.state.listtodo.filter(elem => {
@@ -75,7 +84,7 @@ class List extends Component {
             name="message"
             value={this.state.message}
             onChange={this.handleInput}
-            rows="3"
+            rows="5"
           ></textarea>
           <button type="submit" className="btn">
             Submit
@@ -89,10 +98,19 @@ class List extends Component {
               <div key={key}>
                 <h3>{todo.title}</h3>
                 <p>{todo.body}</p>
+                <div className="task-edit">
+                  <Link
+                    to={`/editTask/${todo._id}`}
+                    key={todo._id}
+                    className="card-link"
+                  >
+                    Details
+                  </Link>
+                </div>
                 <button
                   type="button"
                   onClick={() => {
-                    this.removeOwnCoin(todo._id);
+                    this.removeTodo(todo._id);
                   }}
                   key={todo._id}
                 >

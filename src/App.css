@@ -19,6 +19,13 @@
   color: white;
 }
 
+.form-addtodo{
+  padding: 30px;
+  text-align: center;
+  display: inline-grid;
+  text-align: center;
+}
+
 .App-link {
   color: #61dafb;
 }

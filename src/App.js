@@ -2,33 +2,23 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import List from './Components/List';
+import Edit from './Components/Edit';
+
+import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-         <h2>Index</h2> 
-         <List />
+         <h2>Page TODO</h2> 
+         <Switch>
+         <Route  exact path="/" component={ List }/>
+         <Route  path="/editTask" component={ Edit }/>
+
+         </Switch>
       </div>
     );
   }
 }
 
 export default App;
-
-
-
-{/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
