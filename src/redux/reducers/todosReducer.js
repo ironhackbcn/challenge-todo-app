@@ -7,15 +7,28 @@ const todosReducer = (state = initialState, action) => {
     case 'ADD_ALL_TASKS':
       const newState = {
         ...state,
-        todos:[...state.todos, action.payload]
+        todos:[...action.payload]
       }
       return newState;
 
     case 'ADD_TASK':
         return {
           ...state,
-          todos: [...action.payload],
+          todos:[...state.todos, action.payload],
         };
+
+    case 'DELETE_TASK':
+      console.log(state.todos)
+      const updatedState = state.todos.filter( el => {
+        return el._id !== action.payload
+      })
+      console.log('updated',...updatedState)
+
+      return {
+        ...state,
+        todos: [...updatedState]
+      }
+
 
     default:
       return state;

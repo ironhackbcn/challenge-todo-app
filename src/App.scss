@@ -1,9 +1,14 @@
 $dark-grey: #4a4a4a;
+$soft-grey: #b8b8b8;
 $white: #fff;
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-size: 16px;
 }
 
 .App {
@@ -15,4 +20,17 @@ h1 {
   color: $white;
   padding: 5px;
   font-size: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  textarea, input {
+    border: 1px $soft-grey solid;
+  }
+  textarea {
+    height: 50px;
+  }
 }

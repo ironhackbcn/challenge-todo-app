@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import redux from 'redux';
 
+import * as actions from './../redux/actions/actions';
+
+// import 'connect' HOC from 'react-redux'
+import { connect } from 'react-redux';
+
 class AddTask extends Component {
 
   state = {
@@ -8,16 +13,29 @@ class AddTask extends Component {
     body: ''
   }
 
+  handleSubmit = () => {
+
+  }
+
   render() {
     return (
-      <form action="">
+      <form  onSubmit={this.handleSubmit}>
         <label htmlFor="">Title</label>
-        <input type="text"/>
+        <input type="text" name="" value="" style={{marginBottom: '10px'}}/>
+
         <label htmlFor="">Description</label>
-        <input type="text"/>
+        <textarea type="text" name="" value="" style={{marginBottom: '10px'}}/>
       </form>
     )
   }
 }
 
-export default AddTask;
+const mapDispatchToProps = dispatch => {
+  return {
+    addAllTasks: allTasks => {
+      dispatch(actions.addAllTasks(allTasks));
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(AddTask);
