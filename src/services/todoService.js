@@ -19,15 +19,15 @@ class Todos {
               .then(({ data }) => data);
   }
 
-  createOne(item) {
-    const {title, body} = item;
+  createOne(task) {
+    const {title, body} = task;
     return this.todos
               .post('/', {title, body})
               .then(({ data }) => data);
   }
 
-  updateOne(modifiedItem, id) {
-    const {title, body} = modifiedItem;
+  updateOne(modifiedTask, id) {
+    const {title, body} = modifiedTask;
     return this.todos
               .put(`/${id}`, {title, body})
               .then(({data}) => data);

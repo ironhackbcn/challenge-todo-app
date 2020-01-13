@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import redux from 'redux';
 
-class AddItem extends Component {
+class AddTask extends Component {
 
   state = {
     title: '',
@@ -20,4 +20,4 @@ class AddItem extends Component {
   }
 }
 
-export default AddItem;
+export default AddTask;
