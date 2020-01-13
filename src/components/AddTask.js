@@ -46,7 +46,7 @@ class AddTask extends Component {
                   value={description} style={{marginBottom: '10px'}} 
                   onChange={this.handleChange}/>
 
-        <button type="submit">Add Task</button>
+        <button type="submit" className="btn btn--add-task">Add Task</button>
       </form>
     )
   }

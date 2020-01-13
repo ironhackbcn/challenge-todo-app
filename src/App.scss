@@ -18,19 +18,71 @@ body {
 h1 {
   background-color: $dark-grey;
   color: $white;
-  padding: 5px;
+  padding: 20px 0;
   font-size: 30px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 365px;
   margin: 0 auto;
+  background-color: #dedede;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  border-radius: 3px;
+  margin-bottom: 18px;
+  label {
+    text-align: left;
+    margin-bottom: 5px;
+  }
   textarea, input {
     border: 1px $soft-grey solid;
+    outline: none;
+    padding: 5px;
   }
   textarea {
     height: 50px;
   }
+}
+
+.btn {
+  padding: 5px 10px;
+  width: 80px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 3px;
+  &--add {
+    background-color: rgb(34, 255, 181);   
+  }
+  &--add-task {
+    background-color: rgba(34, 255, 181, 0.514);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  &--delete {
+    background-color: darkred;
+    color: $white;
+  }
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 365px;
+  margin: 0 auto;
+  h2 {
+    border-bottom: 1px solid $soft-grey;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  div {
+    text-align: left;
+  }
+
 }

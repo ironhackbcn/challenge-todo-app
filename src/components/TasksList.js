@@ -30,7 +30,7 @@ class TasksList extends Component {
     const  { todos } = this.props;
 
     return (
-      <div>
+      <div className="tasks-container">
         <h2>List of tasks</h2>
         { todos
           ? (
@@ -39,7 +39,7 @@ class TasksList extends Component {
                   <div>
                     <h4>{task.title}</h4>
                     <p>{task.body}</p>
-                    <button onClick={() => this.deleteTask(task._id)}>Delete task</button>
+                    <button onClick={() => this.deleteTask(task._id)} className="btn btn--delete">Delete</button>
                   </div>
                 )   
             })
