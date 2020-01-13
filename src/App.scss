@@ -1,0 +1,18 @@
+$dark-grey: #4a4a4a;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  background-color: $dark-grey;
+  color: $white;
+  padding: 5px;
+  font-size: 30px;
+}
