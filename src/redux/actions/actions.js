@@ -1,5 +1,5 @@
-export const loadAllTasks = ( allTasks ) => ({
-  type: 'LOAD_ALL_TASKS',
+export const addAllTasks = ( allTasks ) => ({
+  type: 'ADD_ALL_TASKS',
   payload: allTasks
 })
 

@@ -1,8 +1,9 @@
 import axios from 'axios';
+
 class Todos {
   constructor() {
     this.todos = axios.create({
-      baseURL: 'http:localhost/4000/api/v1/todos',
+      baseURL: 'http://localhost:4000/api/v1/todos',
       withCredentials: true,
     });
   }
