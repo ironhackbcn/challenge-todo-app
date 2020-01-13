@@ -41,3 +41,19 @@ transition: 0.3s;
 padding: 50px 25px;
 }
 `
+
+export const Container = styled.div`
+@import url("https://fonts.googleapis.com/css?family=Solway&display=swap");
+
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+text-align:center;
+background-color: #e4f9ff;
+p {
+  font-size: 12px;
+  font-family: "Solway", serif; 
+}
+`

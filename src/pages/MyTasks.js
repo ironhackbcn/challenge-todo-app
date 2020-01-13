@@ -1,16 +1,39 @@
 import React, { Component } from 'react';
 
-// import {HomeContainer} from '../styles/global';
-// import SectionButtons from "../components/SectionButtons";
+import MyTaskList from '../components/MyTasksList';
+import myTaskService from '../lib/mytasks-service';
+
+import { Container } from '../styles/global'
 
 
 
-class MyTasks extends Component {
+export class MyTasks extends Component {
+
+    state = {
+        listOfMyTasks: []
+      };
+
+      getMyTaskHandler = (_id) => {
+    
+        myTaskService.getAllTodos()
+        .then( (AllMyTodos) => {
+          
+          this.setState({listOfMyTasks : AllMyTodos})
+          
+        })
+        .catch( (err) => console.log(err));
+      }
+    
+
+
+
     render() {
         return (
-        <div>
+        <Container>
         <h1>My Task page</h1>
-        </div>
+        <MyTaskList myTasks={this.state.listOfMyTasks}/>
+
+        </Container>
         );
     }
 }
