@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-import MyTaskList from '../components/MyTasksList';
+// import MyTaskList from '../components/MyTasksList';
 import myTaskService from '../lib/mytasks-service';
-
+import { Button } from './../styles/elements'
 import { Container } from '../styles/global'
+import   view  from './../images/view.svg'
 
 
 
@@ -20,7 +21,7 @@ export default class MyTasksList extends Component {
     
       handleGetTasks = () => {
         
-        myTaskService.allMySigns()
+        myTaskService.allMyTodos()
         .then((AllMyTodos) => {
           
           this.setState({listOfMyTasks : AllMyTodos})
@@ -42,7 +43,7 @@ export default class MyTasksList extends Component {
       
       <Container>
       
-      <MyTaskList myTasks={this.state.listOfMyTasks} handleGetTasks={this.handleGetTasks} />
+      {/* <MyTaskList myTasks={this.state.listOfMyTasks} handleGetTasks={this.handleGetTasks} /> */}
 
      </Container>
       </>
