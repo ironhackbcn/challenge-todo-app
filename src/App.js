@@ -11,7 +11,7 @@ class App extends Component {
       <main className="App">
         <h1>TO DO LIST</h1>
         <button>Add task</button>
-        {/* <AddTask /> */}
+        <AddTask />
         <TasksList />
       </main>
     );

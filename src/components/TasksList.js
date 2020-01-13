@@ -7,7 +7,7 @@ import * as actions from './../redux/actions/actions';
 import { connect } from 'react-redux';
 
 class TasksList extends Component {
-  
+
   deleteTask = (id) => {
     console.log(id)
     todoService.deleteOne(id)
