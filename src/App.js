@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 // ------ CSS + IMAGES ----- ///
 import { Main } from './styles/global'
@@ -12,7 +12,9 @@ import MyTasks from './pages/MyTasks';
 class App extends Component {
   render() {
     return (
+      <BrowserRouter>
       <div className="App">
+
       <Main>
         
         <Switch>
@@ -22,6 +24,7 @@ class App extends Component {
 
         </Main>
       </div>
+      </BrowserRouter>
     );
   }
 }
