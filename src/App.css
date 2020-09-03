@@ -19,6 +19,14 @@
   color: white;
 }
 
+.modal-alert-delete{
+  width: 370px !important;
+}
+
+.modal-alert-edit{
+  width: 370px !important;
+}
+
 .App-link {
   color: #61dafb;
 }

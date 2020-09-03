@@ -5,7 +5,7 @@ import AlertMessageEdit from "./alertUpdate.component";
 import AlertMessageDelete from "./alertDelete.component";
 
 const CardTask = (props) => {
-  const { title, body, getTaskService } = props;
+  const { title, body, getTaskService } = props; // in this props i have all TASK info
   const [show, setShow] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
 
@@ -21,7 +21,7 @@ const CardTask = (props) => {
   return (
     <>
       <Card
-        style={{ width: "30rem", marginBottom: "3rem", marginLeft: "10rem" }}
+        style={{ width: "30rem", marginBottom: "3rem"}}
       >
         <Card.Body>
           <Card.Title>Card {title}</Card.Title>
@@ -35,10 +35,10 @@ const CardTask = (props) => {
 
       {show && isDelete ? (
         <AlertMessageDelete
-          {...props}
-          show={show}
+          {...props} // i pass all TASK INFO
+          show={show} // control SHOW ALERT
           setShow={setShow}
-          getTaskService={getTaskService}
+          getTaskService={getTaskService} // RELOAD PAGE
         />
       ) : (
         <AlertMessageEdit

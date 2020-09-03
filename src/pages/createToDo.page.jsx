@@ -8,15 +8,13 @@ const CreateTodo = () => {
 
   const handleOnChangeInfo = (event) => {
     const { name, value } = event.target;
-
-    setTask({ ...task, [name]: value });
+    setTask({ ...task, [name]: value }); // update my task all time
   };
 
   const handleSubmitCreateTODO = (event) => {
-    event.preventDefault()
-    console.log('este es el task', task)
-    createTODOtask(task);
-    setTask({ title: "", body: "" });
+    event.preventDefault();
+    createTODOtask(task); // Call from my api service 
+    setTask({ title: "", body: "" }); // RESET TASK TO CREATE NEW
   };
 
   return (

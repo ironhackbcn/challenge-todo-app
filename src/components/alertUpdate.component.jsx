@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Form } from "react-bootstrap";
 import { editTODOtask } from "../services/todo.service";
 
 const AlertMessageEdit = (props) => {
@@ -29,27 +29,33 @@ const AlertMessageEdit = (props) => {
   };
 
   return (
-    <Modal className="modal-alert-delete" show={show}>
+    <Modal className="modal-alert-edit" show={show}>
       <Modal.Header closeButton onClick={(e) => handleClose(e)}>
         <Modal.Title>Editando {title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <input
-          type="text"
-          value={task.title}
-          name="title"
-          id="input-title"
-          onChange={(e) => handleOnChangeInfo(e)}
-        />
-
-        <label htmlFor="input-body">Descripcion</label>
-        <input
-          type="text"
-          name="body"
-          value={task.body}
-          id="input-body"
-          onChange={(e) => handleOnChangeInfo(e)}
-        />
+        <Form>
+          <Form.Group >
+            <Form.Label>Title</Form.Label>
+            <Form.Control 
+              type="text"
+              value={task.title}
+              name="title"
+              id="input-title"
+              onChange={(e) => handleOnChangeInfo(e)}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Body</Form.Label>
+            <Form.Control 
+              type="text"
+              name="body"
+              value={task.body}
+              id="input-body"
+              onChange={(e) => handleOnChangeInfo(e)}
+            />
+          </Form.Group>
+        </Form>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={() => handleClose()}>
