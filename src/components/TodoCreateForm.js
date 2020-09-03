@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import todoService from '../service/todoService';
 
-//form para añadir nuevos todos
-
  class TodoCreateForm extends Component {
      _isMounted = false
      state={
@@ -12,7 +10,6 @@ import todoService from '../service/todoService';
 
      componentDidMount(){
         this._isMounted = true
-        //console.log("mounted")
       }
 
       handleFormSubmit = event => {
@@ -26,8 +23,6 @@ import todoService from '../service/todoService';
                 title: '',
                 body: ''
             })}
-            // console.log(this.props)
-            //this.props.history.goBack()
           });
       };
 
