@@ -24,7 +24,7 @@ const CardTask = (props) => {
         style={{ width: "30rem", marginBottom: "3rem"}}
       >
         <Card.Body>
-          <Card.Title>Card {title}</Card.Title>
+          <Card.Title>{title}</Card.Title>
           <Card.Text>{body}</Card.Text>
           <Button onClick={() => handleShowAlertDelete()}>delete</Button>
           <Button onClick={() => handleShowAlertEdit()} id="EditButton">
