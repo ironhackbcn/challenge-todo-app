@@ -1,33 +1,134 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before{
+  margin: 0;
+  padding: 0;  
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root{
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+body{
+  box-sizing: border-box; 
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+}
+input{
+  cursor: pointer;
+}
+
+header{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-color: #FFEC8C;
+  width: 100%;
+  
 }
 
-.App-link {
-  color: #61dafb;
+header>h1{
+  margin: 70px auto 40px;
+  font-size: 3rem;
+  font-family: 'Rock Salt';
+  color: #807A58;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* add todo form */
+form{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.inp-lab{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.inp-lab>label{
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.inp-lab>input{
+  padding: 5px;
+  border: none;
+}
+
+.add-btn{
+  background-color: #807A58;
+  color: #FFEC8C;
+  font-size: 1.05rem;
+  align-self: center;
+}
+/* LIST container */
+.todos-list-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 95%;
+  padding-top: 30px;
+}
+.todos-container{
+  width: 45%;
+}
+
+.not{
+  color:#854235 ;
+}
+.done{
+  color:#5F853F;
+}
+.todos-container>h1{
+  border-bottom: 2px solid #FFEC8C;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* TODOS CARD */
+
+.card-container{
+  box-shadow: 0px 0px 10px -5px rgba(128,122,88,0.75);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-container>h2{
+  font-size: 1.2rem;
+  font-family: 'Rock Salt';
+  color: #807A58;
+}
+
+.content{
+  font-size: 1.05rem;
+  padding-bottom: 10px;
+
+}
+
+.btn-container{
+  display: flex;
+  justify-content: flex-end;
+  width: 97%;
+}
+.btn-container>input{
+  background-color: #807A58;
+  color: #FFEC8C;
+  font-size: 1.05rem;
+  border: none;
+  padding: 5px;
+  margin-right: 15px;
 }
