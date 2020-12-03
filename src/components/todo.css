@@ -1,0 +1,42 @@
+.containerTodo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    padding: 10px;
+    border-radius: 2rem;
+}
+.input:hover{
+    background-color: grey;
+    color: black;
+}
+.input::placeholder{
+    color: black;
+}
+.eachTodo{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.button{
+    border-radius: 2rem;
+    margin-top: 10px;
+}
+
+.button:hover{
+    background-color: grey;
+}
+
+.delete{
+    border-radius: 2rem;
+}
+
+.delete:hover{
+    background-color: red;
+}
