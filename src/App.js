@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import TodosList from "./components/TodosList"
 import CreateTodo from "./components/CreateTodos"

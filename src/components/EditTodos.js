@@ -57,26 +57,7 @@ export default class EditTodo extends Component {
                             <label htmlFor="">Title</label>
                             <input type="text" value= {this.state.title}  onChange= {(e) => this.onChangeTodoTitle(e)}/>
                             <label htmlFor="">Description</label>
-                            <input type="text" value= {this.state.body}  onChange= {(e) => this. onChangeTodoBody(e)}/>
-                            <label htmlFor="">Priority</label>
-                            <div >
-                                <div >
-                                    <input type="radio" placeholder= {this.state.title } id= "priorityLow" value="Low" checked= {this.state.todoPriority === "Low"} onChange= {(e) => this.onChangeTodoPriority(e)}/>
-                                    <label >Low</label>
-                                </div> 
-                                <div >
-                                    <input type="radio" placeholder= {this.state.description } id= "priorityMedium" value="Medium" checked= {this.state.todoPriority === "Medium"} onChange= {(e) => this.onChangeTodoPriority(e)}/>
-                                    <label >Medium</label>
-                                </div> 
-                                <div >
-                                    <input type="radio" id= "priorityHigh" value="High" checked= {this.state.todoPriority === "High"} onChange= {(e) => this.onChangeTodoPriority(e)}/>
-                                    <label >High</label>
-                                </div> 
-                                 <div > 
-                                    <input type="submit" className= "create-button" value= "Update Todo" />
-                                    
-                                </div>
-                                </div>
+                            <input type="text" value= {this.state.body}  onChange= {(e) => this.onChangeTodoBody(e)}/>
                     </div>
 
                 </form>

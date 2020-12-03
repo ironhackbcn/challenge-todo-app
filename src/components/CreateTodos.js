@@ -41,7 +41,7 @@ export default class CreateTodos extends Component {
                             <label htmlFor="">Title</label>
                             <input type="text" value= {this.state.title} onChange= {(e) => this.onChangeTodoTitle(e)}/>
                             <label htmlFor="">Description</label>
-                            <input type="text" value= {this.state.body} onChange= {(e) => this. onChangeTodoBody(e)}/>
+                            <input type="text" value= {this.state.body} onChange= {(e) => this.onChangeTodoBody(e)}/>
                          
                                     <input type="submit" value= "Create Todo" className= "create-button"/>
                                     
