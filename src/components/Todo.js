@@ -54,7 +54,7 @@ class Todo extends Component {
             <div>
             {editable ? <div>
                 <form onSubmit={this.handleFormSubmit}>
-            <div className="form_part">
+            <div className="form">
               <label>Title:</label>
               <input
                 type="text"
@@ -71,12 +71,12 @@ class Todo extends Component {
               />
             </div>
             <input
-                className="form_button_btn"
+                className="btn"
                 type="submit"
                 value="Add changes"
               />
           </form>
-          <button className = 'btn' onClick={() => this.props.history.goBack()}>Go back to the homepage</button>
+          <button className = 'btn_back' onClick={() => this.props.history.goBack()}>Go back</button>
             </div>
         : <div>
                 <h1>{title}</h1>
