@@ -57,7 +57,14 @@ export default class EditTodo extends Component {
                             <label htmlFor="">Title</label>
                             <input type="text" value= {this.state.title}  onChange= {(e) => this.onChangeTodoTitle(e)}/>
                             <label htmlFor="">Description</label>
-                            <input type="text" value= {this.state.body}  onChange= {(e) => this.onChangeTodoBody(e)}/>
+                            <input type="text" value= {this.state.body}  onChange= {(e) => this. onChangeTodoBody(e)}/>
+                          
+                     
+                                 <div > 
+                                    <input type="submit" className= "create-button" value= "Update" />
+                                    
+                                </div>
+                              
                     </div>
 
                 </form>
