@@ -13,8 +13,8 @@ class TodoDetails extends Component {
   }
 
   getSingleTodo = () => {
-    //const { id } = this.props.match.params;
-    const { id } = this.state.listOfTodos._id;
+    const { id } = this.props.match.params;
+    //const { id } = this.state.listOfTodos._id;
     console.log(id, "id");
     axios
       .get(`http://localhost:4000/api/v1/todos/${id}`)
@@ -27,7 +27,9 @@ class TodoDetails extends Component {
   };
 
   deleteOneTodo = () => {
-    const { id } = this.state.listOfTodos._id;
+    //const { id } = this.state.listOfTodos._id;
+    const { id } = this.props.match.params;
+
     axios
       .delete(`http://localhost:4000/api/v1/todos/${id}`)
       .then((response) => {
@@ -43,13 +45,10 @@ class TodoDetails extends Component {
     return (
       <div>
         <Navbar />
-
         <h2>{title}</h2>
-
         <article>
           <p>{body}</p>
         </article>
-
         <div className="btn">
           <button onClick={this.deleteOneTodo}>Delete todo</button>
         </div>
