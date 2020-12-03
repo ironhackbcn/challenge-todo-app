@@ -12,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      {/* Switch and routes defined to create pages and components */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/todos/:id" component={ToDoDetails} />

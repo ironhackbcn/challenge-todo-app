@@ -8,6 +8,8 @@ class Service {
     });
   }
 
+//   Links between front and back created
+
   getAllToDoes() {
     return this.service.get("/api/v1/todos").then(({ data }) => data); 
   }

@@ -4,6 +4,7 @@ import service from "./../lib/service.js";
 class AddToDoForm extends Component {
   state = {};
 
+  // Functions to manage the data from the form or inputs 
   handleFormSubmit = async (event) => {
     event.preventDefault();
     const { title, body } = this.state;

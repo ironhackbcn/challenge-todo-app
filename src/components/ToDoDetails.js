@@ -7,6 +7,7 @@ class ToDoDetails extends Component {
     toDo: {},
   };
 
+//   To call the To Do from the server
   getToDo = async () => {
     const id = this.props.match.params.id;
     const toDo = await service.getToDo(id);
@@ -14,11 +15,13 @@ class ToDoDetails extends Component {
       toDo: toDo,
     });
   };
-
+  
+//   To call the previous function everytime the component/page is mouunted
   componentDidMount = () => {
     this.getToDo();
   };
 
+//   Function to delete the To Do
   deleteToDo = async () => {
     const id = this.props.match.params.id;
     await service.deleteToDo(id);
