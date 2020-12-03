@@ -12,16 +12,16 @@ class Todo {
     return this.todoFunc.get("/todos").then(({ data }) => data); 
   }
 
- editTodo(id, body, title) {
-    return this.todoFunc.put(`/todos/${id}`, {body, title}).then(({ data }) => data); 
+ editTodo(id, title, body) {
+    return this.todoFunc.put(`/todos/${id}`, {title, body}).then(({ data }) => data); 
   }
 
  deleteTodo(id) {
     return this.todoFunc.delete(`/todos/${id}`).then(({ data }) => data); 
   }
 
-  createTodo(body, title) {
-    return this.todoFunc.post("/todos", {body, title}).then(({ data }) => data); 
+  createTodo(title, body) {
+    return this.todoFunc.post("/todos", {title, body}).then(({ data }) => data); 
   }
 
 }
