@@ -1,33 +1,66 @@
-.App {
-  text-align: center;
+body{
+  font-size: 22px;
+  background-image: url("https://image.freepik.com/vector-gratis/fondo-rojo-navidad-nevado_1048-3461.jpg");
+  background-position: cover;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.align-todos{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.align-todos1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.details{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.btn{
+  border-radius:10px;
+  width:200px;
+  margin-top:15px;
+  color:white;
+  padding: 20px;
+  font-size: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+#delete{
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#create{
+  background-color:orange;
 }
+
+.create-task{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin:15px;
+}
+
+input {
+  border-radius: 10px;
+}
+
+textarea{
+  border-radius: 10px;
+}
+.navidad{
+  background-color:white;
+  margin:80px 500px
+}
+
+#navidad{
+  background-color:white;
+  margin:50px 500px
+}
+
+
+
+
+
