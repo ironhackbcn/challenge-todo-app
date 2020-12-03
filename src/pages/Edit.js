@@ -42,10 +42,12 @@ class Edit extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container edit-form">
         <hr />
-        <h3>Edit</h3>
-        <form onSubmit={this.handleFormSubmit}>
+        <h3 className="title">Edit</h3>
+
+        <form className="form " onSubmit={this.handleFormSubmit}>
+        <div>
           <label>Title:</label>
           <input
             type="text"
@@ -53,6 +55,8 @@ class Edit extends Component {
             value={this.state.title}
             onChange={e => this.handleChangeTitle(e)}
           />
+          </div>
+        <div> 
           <label>Description:</label>
           <input
             type="text"
@@ -60,9 +64,10 @@ class Edit extends Component {
             value={this.state.body}
             onChange={e => this.handleChangeBody(e)}
           />
-
+          </div>
           <input type="submit" value="Submit" />
         </form>
+
       </div>
     );
   }

@@ -9,8 +9,7 @@ import TodoDetails from "./pages/TodoDetails";
 class App extends Component {
   render() {
     return (
-      
-      <div className="App">
+      <div>
       <Navbar />
         <Switch>
           <Route exact path="/create" component={AddTodo}/>

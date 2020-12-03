@@ -30,10 +30,10 @@ class AddTodo extends Component {
     render() {
         const { title, body } = this.state;
         return (
-            <div className="">
-                <h1 className="">Add To do on my list</h1>
+            <div className="container">
+                <h1 className="title">Add To do on my list</h1>
 
-                <form className="" onSubmit={this.handleFormSubmit}>
+                <form className="form" onSubmit={this.handleFormSubmit}>
 
                 <div className="">
                 <label>Title:</label>
@@ -46,7 +46,7 @@ class AddTodo extends Component {
                 </div>
 
                 <div className="">
-                <input className="" type="submit" value="Submit"/>
+                <input className="add" type="submit" value="Submit"/>
                 </div>
                 </form>
             </div>

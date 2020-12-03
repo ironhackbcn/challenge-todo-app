@@ -24,8 +24,8 @@ class AllTodos extends Component {
     
     render() {
         return (
-            <div className="">
-                <h1 className="">To do list</h1>
+            <div className="container">
+                <h1 className="title">To do list</h1>
                 <div>
                 { this.state.listOfTodos.map( todo => {
                     return (

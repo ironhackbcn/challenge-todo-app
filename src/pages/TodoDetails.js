@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import EditTodo from './Edit';
 
 class TodoDetails extends Component {
@@ -57,11 +57,13 @@ render(){
     console.log(this.state, 'el state')
   return(
       
-    <div>
-      <h1>{this.state.title}</h1>
+    <div className="container">
+    <div className="todo-details">
+      <h1 className="title">{this.state.title}</h1>
       <p>{this.state.body}</p>
-      <div>{this.renderEditForm()} </div>
-      <button onClick={() => this.deleteTodo()}>Delete</button> 
+      </div>
+      <div className="form">{this.renderEditForm()} </div>
+      <button className="delete" onClick={() => this.deleteTodo()}>Delete</button> 
       <br/>
 
       <Link to={'/'}>Back to my list</Link>
