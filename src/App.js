@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Switch, Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
+
+import Todo from "./pages/Todo";
+import CreateTodo from "./pages/CreateTodo";
+import DeleteTodo from "./pages/DeleteTodo";
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1> Lista de Todos</h1>
+        <BrowserRouter>
+        <Switch>
+        <Route exact path='/' component={Todo}/>
+        <Route exact path='/' component={CreateTodo}/>
+        <Route exact path='/' component={DeleteTodo}/>
+        </Switch>
+        </BrowserRouter>
       </div>
     );
   }
