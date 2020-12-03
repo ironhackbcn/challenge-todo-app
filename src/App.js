@@ -1,28 +1,59 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+// * Importing Material-Ui for structure and styling
+import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
+
+// * After redux is initialized, we add this lane to dispatch an action
+import { useDispatch } from "react-redux";
+
+// * Importing our actions
+import { getAllTodos } from "./actions/todos";
+
+// * Import our Components
+import Todos from "./components/Todos/Todos";
+import Form from "./components/Form/Form";
+
+// * Importing our CSS files
+import useStyles from "./styles";
+
+const App = () => {
+  const [currentId, setCurrentId] = useState(null);
+
+  // Calling css styles
+  const classes = useStyles();
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllTodos());
+  }, [currentId, dispatch]);
+
+  return (
+    <Container maxWidth="lg">
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography className={classes.heading} variant="h3" align="center">
+          Todo List
+        </Typography>
+      </AppBar>
+      <Grow in>
+        <Container>
+          <Grid
+            container
+            justify="space-between"
+            alignItems="stretch"
+            spacing={3}
           >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+            <Grid item xs={12} sm={7}>
+              <Todos setCurrentId={setCurrentId} />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
+            </Grid>
+          </Grid>
+        </Container>
+      </Grow>
+    </Container>
+  );
+};
 
 export default App;

@@ -1,69 +1,41 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
-
-# React Todo-list challenge
-## < Frontend Test >
-
-## What is this about:
-----
- The purpose of this test is to know your ability to create a small functional single page application in a limit of time. Below you’ll find the features, the requirements and the key points you should keep on mind while developing.
-
-## What we’ll evaluate
-----
-- The final product.
-- The use of ES6 features is allowed and encouraged.
-- The use of CSS processors (Sass, LESS...) is allowed and encouraged.
-- The following are a bonus points for the candidate:
-  - ✓ Code quality
-  - ✓ Mobile support
-  - ✓ Application structure
-  - ✓ User Interface
-  - ✓ Planning session ( README, Kanban etc.. )
-
-## What we want you to do
----
-We want you to start simple and focus on a working product. At the same time this challenge has no limitations and we encourage you to be creative in terms of functionality and style (includes frontend and backend).
-
----
-### Example User stories
-- **Create todo** As a user I want to create a new todo/task with `title` and `body` and save it in the database.
-- **List todos** As a user I want to see all my todos in a list.
-- **Delete todo** As a user I want to delete a todo from the list when I don't want it anymore.
-
-### Backlog
-- **Update todo** A a user I want to be able to modify an existing todo.
-- **Done** As a user I want to mark my todo as done.
-- **Move todos** As a user I want to rearrange my todos.
-- etc...
-
-## Provided material
----
-
-- Fork and clone this repository.
-- Run the following commands:
-```
-cd challenge-todo-app
-npm install
-npm start
-```
-
-- Fork and clone [the server](https://github.com/ironhackbcn/challenge-todo-api) repository
-
-You will get intstuctions about installation and how to access the Todo REST api there.
+## Front-end and connection to the back-end Challenge from Adrián Paniagua
 
 ---
 
-## Delivery requirements
+This challenge has been solved using some upgrades on code.
+
+Of course it mantaint the MERN stack version but working with:
+
+- Material-ui (Popular React UI Framework) - To simplify the front-end layout.
+
+- React-redux - An state container which permits access from anywhere in the app to states (bye bye childs and parents!)
+
+- Redux-thunk - Perfect friend to use asyncronous actions between front and back-end.
+
+- Moment - To use dates and times when an user post a new Todo in his lists. We will know how many time passes since it post it.
+
+- React-hooks - To simplify the state writting of the components and changes.
+
 ---
-- Push your application to GitHub and send the repository url on Slack.
-- The application should include connection between the backend and the frontend.
-- It should show a list of todos/tasks.
-- It should include a form to add todos/tasks.
-- The solution must run properly
-- A text file with any instruction required for compiling and/or running the application should be provided as it would be directed to a no technical user.
 
-## Delivery extra (not required)
-- Complete CRUD.
-- Any kind of look & feel or usability improvement for showing your ability/experience in making attractive UI/UX will be evaluated.
-- Any extra comment explaining about what was done or what the candidate would had wanted to improve but didn’t due to lack of time, will be appreciated and evaluated.
+## How and why?
 
-## 🤩 Good Luck! 🤩
+---
+
+I do that challenge in that way because the latests weeks I was learning and working on a similar project which includes these features such as material-ui, Redux and Hooks.
+
+---
+
+## What you can do
+
+- See all the Todo's created.
+- See the creator name.
+- See the created time of the todo.
+- Delete a Todo.
+- Edit the todo (icon of 3 dots).
+- Clear the form fields with a button.
+
+## Buggs / Issues
+
+- Sometimes (not every time) when editing I need to reload the page to see the changes.
+- When deleting a todo, it deletes all todo's on the screen. But just aparently because when we reload the page we see the todo's that we dont delete before. :S
