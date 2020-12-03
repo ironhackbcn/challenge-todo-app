@@ -1,69 +1,70 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+# Getting Started with Create React App
 
-# React Todo-list challenge
-## < Frontend Test >
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## What is this about:
-----
- The purpose of this test is to know your ability to create a small functional single page application in a limit of time. Below you’ll find the features, the requirements and the key points you should keep on mind while developing.
+## Available Scripts
 
-## What we’ll evaluate
-----
-- The final product.
-- The use of ES6 features is allowed and encouraged.
-- The use of CSS processors (Sass, LESS...) is allowed and encouraged.
-- The following are a bonus points for the candidate:
-  - ✓ Code quality
-  - ✓ Mobile support
-  - ✓ Application structure
-  - ✓ User Interface
-  - ✓ Planning session ( README, Kanban etc.. )
+In the project directory, you can run:
 
-## What we want you to do
----
-We want you to start simple and focus on a working product. At the same time this challenge has no limitations and we encourage you to be creative in terms of functionality and style (includes frontend and backend).
+### `npm start`
 
----
-### Example User stories
-- **Create todo** As a user I want to create a new todo/task with `title` and `body` and save it in the database.
-- **List todos** As a user I want to see all my todos in a list.
-- **Delete todo** As a user I want to delete a todo from the list when I don't want it anymore.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Backlog
-- **Update todo** A a user I want to be able to modify an existing todo.
-- **Done** As a user I want to mark my todo as done.
-- **Move todos** As a user I want to rearrange my todos.
-- etc...
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Provided material
----
+### `npm test`
 
-- Fork and clone this repository.
-- Run the following commands:
-```
-cd challenge-todo-app
-npm install
-npm start
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Fork and clone [the server](https://github.com/ironhackbcn/challenge-todo-api) repository
+### `npm run build`
 
-You will get intstuctions about installation and how to access the Todo REST api there.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Delivery requirements
----
-- Push your application to GitHub and send the repository url on Slack.
-- The application should include connection between the backend and the frontend.
-- It should show a list of todos/tasks.
-- It should include a form to add todos/tasks.
-- The solution must run properly
-- A text file with any instruction required for compiling and/or running the application should be provided as it would be directed to a no technical user.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Delivery extra (not required)
-- Complete CRUD.
-- Any kind of look & feel or usability improvement for showing your ability/experience in making attractive UI/UX will be evaluated.
-- Any extra comment explaining about what was done or what the candidate would had wanted to improve but didn’t due to lack of time, will be appreciated and evaluated.
+### `npm run eject`
 
-## 🤩 Good Luck! 🤩
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
