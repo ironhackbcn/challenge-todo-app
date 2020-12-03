@@ -8,26 +8,87 @@
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:0 20px;
+  width: 90vw;
+  justify-content: space-between;
+  background-color: grey
+}
+
+.main-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.link {
+  text-decoration: none;
+  color: white
+}
+
+li {
+  list-style-type: none;
+  margin: 0 10px;
+
+}
+
+.nav-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2 {
+  margin: 20px
+}
+
+.display-buttons {
+  display: flex;
+  width: 80vw;
+  justify-content: space-around;
+}
+
+.display-buttons > * {
+  border: none;
+  padding: 5px 10px;
+  background-color: grey;
   color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  border: 2px dashed grey;
+  padding: 20px;
+  margin: 20px 0
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px; 
+}
+
+label {
+  font-size: 20px;
+  margin: 20px 0 10px 0;
+  color: grey
+}
+
+input {
+  height: 20px
+}
+
+.create-button {
+  border: none;
+  /* padding: 5px 10px; */
+  background-color: grey;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 20px;
+  height: 20px;
+  align-self: center;
 }

@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import TodosList from "./components/TodosList"
+import CreateTodo from "./components/CreateTodos"
+import EditTodo from "./components/EditTodos"
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+      
+        <div className="main-page">
+         <nav className="navbar">
+           <Link to="/" className= "link">To Do App</Link>
+            <ul className= "nav-options">
+              <li >
+                <Link to= "/" className= "link">Todos</Link>
+              </li>
+              <li>
+                <Link to= "/create" className= "link">Create</Link>
+              </li>
+              </ul>
+         </nav>
+         <Switch>
+            <Route exact path="/" component={TodosList} /> 
+            <Route exact path= "/edit/:id" component={EditTodo} />
+            <Route exact path= "/create" component={CreateTodo} />
+
+         </Switch>
+
+        </div>
+      </Router>
     );
   }
 }
