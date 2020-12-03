@@ -1,38 +1,43 @@
 import  axios  from "axios";
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class AllTodos extends Component {
-  constructor(props){
-    super(props);
-    this.state = { 
-        title: "",
-        body: "",
-    }
+  constructor(){
+    super();
+    this.state = { listOfTodos: [] }
   }
   
-  handleFormSubmit = event => {
-    event.preventDefault();
-    const { title, body } = this.state;
+  getAllTodos = () => {
     axios
-    .get("http://localhost:4000/api/v1/todos", { title, body })
-    .then(() => {
-      this.setState({ title: "", body: "" });
-    })
-    .catch(error => console.log(error));
-  }
+    .get("http://localhost:4000/api/v1/todos").then(responseFromApi => {
+        this.setState({
+            listOfTodos: responseFromApi.data
+        });
+        
+      });
+    };
 
-   handleChange = event => {
-      const { name, value } = event.target;
-      this.setState({ [name]: value });
-      };
+    componentDidMount() {
+        this.getAllTodos();
+      }
     
     render() {
-        const { title, body } = this.state;
         return (
             <div className="">
                 <h1 className="">To do list</h1>
-
-                
+                <div>
+                { this.state.listOfTodos.map( todo => {
+                    return (
+                    <div key={todo._id}>
+                        <Link to={`/todos/${todo._id}`}>
+                        <h3>{todo.title}</h3>
+                        </Link>
+                        <p >{todo.body} </p> 
+                    </div>
+                    )})
+                }
+                </div>
             </div>
         )
     }
