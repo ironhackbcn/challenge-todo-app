@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 
+
+
 export default class Create extends Component {
     state = {
         todos: [],
@@ -17,7 +19,7 @@ export default class Create extends Component {
     
     getTodos = async () => {
         const res = await axios.get('http://localhost:4000/api/v1/todos')
-        console.log(res.data)
+        // console.log(res.data)
         this.setState({todos: res.data})
     }
    
@@ -39,21 +41,23 @@ export default class Create extends Component {
 
     deleteTodo = async (id) => {
         await axios.delete('http://localhost:4000/api/v1/todos/' + id)
-        console.log(id)
+        // console.log(id)
         this.getTodos()
     }
 
-    formShow = (id) => {
+    formShow = () => {
         this.setState({showForm: !this.state.showForm})
-        console.log(id)
+        // console.log(id)
     }
 
     render() {
-        console.log(this.state.todos)
+        // console.log(this.state.todos)
         return (
-     <div>
+            
+     <div id="formCreate">
+        <h2>Tareas</h2>
         <form onSubmit={(e) => this.handleSubmit(e)}>
-          <label htmlFor="">title</label>
+          <label>title</label>
           <input
             type="text"
             name="title"
@@ -61,7 +65,7 @@ export default class Create extends Component {
             onChange={(e) => this.handleChange(e)}
           />
 
-          <label htmlFor="">body</label>
+          <label >body</label>
           <input
             type="text"
             name="body"
@@ -70,16 +74,20 @@ export default class Create extends Component {
           />
           <button type="submit" >Save</button>
         </form>
-            <h2>Tareas</h2>
+       
             {this.state.todos.map((element) => 
-                (<div key={element._id}> 
+                (
+                
+                <div className="card" key={element._id}> 
                     <h3>{element.title}</h3>
                     <p>{element.body}</p>
                     <button onClick={() => this.deleteTodo(element._id)}>Delete</button>
-                    <Link to={'/edit/' + element._id }>Edit</Link>
-                        
-                </div>)
+                    <Link className="edit" to={'/edit/' + element._id }><p>Edit</p></Link>
+                </div>
+                )
+       
             )}
+        
             
         
 </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Create from './component/Create';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
@@ -14,9 +13,10 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-          <img src={logo} className="App-logo" alt="logo" />
+        <h1>CRUD REACT</h1>
             <Route path="/" exact component={Create}/>
             <Route path="/edit/:id" exact component={Edit}/>
+            
       </div>
       </Router>
     );
