@@ -1,16 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const TodoCard = ({ id, title, body}) => {
-
+const TodoCard = ({ _id, title, body }) => {
   return (
-    <article>
-        <Link to={`/todos/${id}`}>
-        <h4>{title}</h4>
-      </Link>
-      <h5>{body}</h5>
-    </article>
-  )
-}
+    <div className="todoCard">
+      <div className="todoLink">
+        <Link to={`/todos/${_id}`}>
+          <h4>{title}</h4>
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-export default TodoCard
+export default TodoCard;

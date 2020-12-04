@@ -1,11 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className = "navbar">
-      <li><Link to="/">Create Todo</Link></li>
-      <li> <Link to="/todos">List of todos</Link></li>
+    <div>
+      <nav className="navbar">
+        <li>
+          <Link to="/">CREATE A TASK</Link>
+        </li>
+        <li>
+          {" "}
+          <Link to="/todos">TASKS LIST</Link>
+        </li>
+      </nav>
     </div>
-  )
+  );
 }

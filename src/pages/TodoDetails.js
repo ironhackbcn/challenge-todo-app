@@ -14,29 +14,19 @@ class TodoDetails extends Component {
 
   getSingleTodo = () => {
     const { id } = this.props.match.params;
-    //const { id } = this.state.listOfTodos._id;
-    console.log(id, "id");
     axios
       .get(`http://localhost:4000/api/v1/todos/${id}`)
       .then((response) => {
-        const singleTodo = response.data[0];
-        console.log(singleTodo, "single todo");
+        const singleTodo = response.data;
         this.setState(singleTodo);
       })
       .catch((err) => console.log(err));
   };
 
   deleteOneTodo = () => {
-    //const { id } = this.state.listOfTodos._id;
     const { id } = this.props.match.params;
-
     axios
       .delete(`http://localhost:4000/api/v1/todos/${id}`)
-      .then((response) => {
-        const singleTodo = response.data[0];
-        console.log(singleTodo, "todo deleted");
-        this.setState(singleTodo);
-      })
       .catch((err) => console.log(err));
   };
 
@@ -45,15 +35,21 @@ class TodoDetails extends Component {
     return (
       <div>
         <Navbar />
-        <h2>{title}</h2>
-        <article>
-          <p>{body}</p>
-        </article>
-        <div className="btn">
-          <button onClick={this.deleteOneTodo}>Delete todo</button>
-        </div>
-        <div className="btn">
-          <button onClick={this.props.history.goBack}>Go back</button>
+        <div className="todoDetail">
+          <h1>{title}</h1>
+          <article>
+            <h5>{body}</h5>
+          </article>
+          <div>
+            <button className="btn" onClick={this.deleteOneTodo}>
+              DELETE TASK
+            </button>
+          </div>
+          <div>
+            <button className="btn" onClick={this.props.history.goBack}>
+              BACK TO LIST
+            </button>
+          </div>
         </div>
       </div>
     );
