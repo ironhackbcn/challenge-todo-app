@@ -1,33 +1,81 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap');
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24x;
+  color:#3a3a3a;
+  background-color: #dcdbdb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#formCreate, form{
+  align-items: center;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 0 0 0;
+}
+
+#formCreate form{
+  border: 1px solid black;
+  padding: 3%;
+  border-radius: 4px;
+  text-align: left;
+  background-color: #3a3a3a;
   color: white;
+  margin: 0 60% 0 0;
 }
 
-.App-link {
-  color: #61dafb;
+#formCreate input{
+  width: 300px;
+  height: 40px;
+  margin: 5px 0 0 0;
+  text-align: center;
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#formCreate button{
+  margin: 10px;
+  width: 100px;
+  padding: 3%;
 }
+
+#formCreate .edit{
+  text-decoration: none;
+  color: #fff;
+}
+
+.card{
+  width: 20%;
+  padding: 2%;
+  border: 1px solid black;
+  margin: 1px 0 0 0;
+  border-radius: 4px;
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.edit{
+  background-color: #fff;
+  align-items: center;
+}
+
+.edit > p{
+width: 20%;
+background-color: #fff;
+color: #000;
+margin: 0 auto 0 auto;
+}
+
+
+
