@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import AllTasks from './components/AllTasks';
 import AddTask from './components/AddTask';
-import { Link } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import Routes from "./components/Routes";
 import Navbar from "./components/Navbar";
@@ -13,9 +13,8 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Switch>
-          <Routes exact path="/" component={Navbar} />
+          <Routes exact path="/allTasks" component={AllTasks} />
           <Routes exact path="/addTask" component={AddTask} />
-          {/* <Routes exact path="/allTasks" component={AllTasks} /> */}
         </Switch>
       </div>
     );

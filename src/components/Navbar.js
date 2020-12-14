@@ -6,12 +6,12 @@ class Navbar extends Component {
     return (
         <nav className="navbar">
             <div>
+                <Link to='/allTask'>
+                    <h1>Tasks list</h1>
+                </Link>     
                 <Link to='/addTask'>
-                    <a className="addTask">Add new task</a>
+                    <h1>Add new task</h1>
                 </Link>
-                {/* <Link to='/allTasks'>
-                    <a className="allTasks">Show all tasks</a>
-                </Link> */}
             </div>
         </nav>
     );

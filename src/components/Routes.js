@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const Routes = ({ component: Component} ) => {
   return (
@@ -10,19 +10,5 @@ const Routes = ({ component: Component} ) => {
     />
   );
 };
-
-// const AnonRoute = ({ component: Component, isLoggedin, ...rest }) => {
-//     console.log(isLoggedin);
-//     return (
-//       <Route
-//         {...rest}
-//         render={(props) =>
-//           !isLoggedin ? <Component {...props} /> : <Redirect to="/dashboard" />
-//         }
-//       />
-//     );
-//   };
-  
-
 
 export default Routes;
