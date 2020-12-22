@@ -3,9 +3,22 @@ import axios from "axios";
 
 class EditTask extends Component {
   state = {
-    title: this.props.theTask.title,
-    body: this.props.theTask.body,
+    currentTask: {},
   };
+
+  getOneTask = () => {
+    const { params } = this.props.match;
+    axios
+      .get(`http://localhost:4000/api/v1/todos/${params.id}`)
+      .then((responseFromApi) => {
+        this.setState({
+          currentTask: responseFromApi.data,
+        })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 
   handleFormSubmit = (event) => {
     const title = this.state.title;
