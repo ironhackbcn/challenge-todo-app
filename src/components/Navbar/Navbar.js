@@ -18,7 +18,7 @@ function Navbar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <Link to="/new" className="button is-light ">
+              <Link to="/new-task" className="button is-light ">
                 <p className="h1-nav add">AddEAT!</p>
               </Link>
             </div>
