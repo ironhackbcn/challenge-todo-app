@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TaskList from "../../components/TaskList/TaskList";
 import axios from "axios";
+import "./TasksPage.css"
 
 class TasksPage extends Component {
   state = {
