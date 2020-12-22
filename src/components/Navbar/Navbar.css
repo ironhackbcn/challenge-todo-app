@@ -1,0 +1,17 @@
+.nav-color {
+  background-color: #ffa45b;
+}
+.h1-nav {
+  color: #fbf6f0;
+  font-size: 26px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add {
+  padding: 5px;
+  color: #ffda77;
+}
