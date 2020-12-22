@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./NewTaskPage.css"
 
 class NewTask extends Component {
   state = {
@@ -18,11 +19,7 @@ class NewTask extends Component {
         body,
       })
       .then(() => {
-        // this.setState({
-        //   title: "",
-        //   body: "",
-        // });
-        this.props.history.push('/')
+        this.props.history.push("/");
       })
       .catch((error) => console.log(error));
   };
@@ -34,31 +31,28 @@ class NewTask extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <div>
-            <label>Title:</label>
-            <input
-              type="text"
-              name="title"
-              value={this.state.title}
-              onChange={(updatedInfo) => this.handleChange(updatedInfo)}
-            />
-            <br />
+      <form onSubmit={this.handleFormSubmit} className="task-form">
+        <label className="label-form">Title:</label>
+        <input
+          type="text"
+          name="title"
+          className="input-form"
+          value={this.state.title}
+          onChange={(updatedInfo) => this.handleChange(updatedInfo)}
+        />
+        <br />
 
-            <label>Body:</label>
-            <input
-              type="text"
-              name="body"
-              value={this.state.body}
-              onChange={(updatedInfo) => this.handleChange(updatedInfo)}
-            />
-            <br />
-
-            <input type="submit" value="ADD NOW" />
-          </div>
-        </form>
-      </div>
+        <label className="label-form">Body:</label>
+        <input
+          type="text"
+          name="body"
+          className="input-form"
+          value={this.state.body}
+          onChange={(updatedInfo) => this.handleChange(updatedInfo)}
+        />
+        <br />
+        <input type="submit" value="ADD NOW" className="task-form-button"/>
+      </form>
     );
   }
 }
