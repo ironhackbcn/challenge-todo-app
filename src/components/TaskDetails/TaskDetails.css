@@ -1,0 +1,8 @@
+.card-detail {
+    border: 1px solid #ffa45b;
+    margin: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  

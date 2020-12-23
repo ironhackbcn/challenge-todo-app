@@ -1,0 +1,22 @@
+.icons {
+    height: 20px;
+  }
+  .delete-btn {
+    background-color: white;
+    border: none;
+    margin-left: 10px;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .action-btn{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .detail-page{
+      margin-top: 70px
+  }
