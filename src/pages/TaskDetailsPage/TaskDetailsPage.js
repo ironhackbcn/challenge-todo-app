@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TaskDetail from "../../components/TaskDetails/TaskDetails";
-import Navbar from "../../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import "./TaskDetailsPage.css";
 

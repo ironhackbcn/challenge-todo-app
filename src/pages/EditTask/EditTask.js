@@ -3,7 +3,7 @@ import axios from "axios";
 
 class EditTask extends Component {
   state = {
-    currentTask: {},
+    currentTask:{}
   };
 
   getOneTask = () => {
@@ -13,20 +13,23 @@ class EditTask extends Component {
       .then((responseFromApi) => {
         this.setState({
           currentTask: responseFromApi.data,
-        })
+        });
       })
       .catch((err) => {
-        console.log(err)
-      })
+        console.log(err);
+      });
+  };
+
+  componentDidMount() {
+    this.getOneTask();
   }
 
   handleFormSubmit = (event) => {
-    const title = this.state.title;
-    const body = this.state.body;
-
+    const title = this.state.currentTask.title;
+    const body = this.state.currentTask.body;
     event.preventDefault();
     axios
-      .put(`http://localhost:4000/api/v1/todos/${this.props.theTask._id}`, {
+      .put(`http://localhost:4000/api/v1/todos/${this.state.currentTask._id}`, {
         title,
         body,
       })
@@ -38,37 +41,38 @@ class EditTask extends Component {
       });
   };
 
-  handleChangeTitle = (event) => {
+  handleChange(event, propertyName) {
+    let copyTask = this.state.currentTask;
+    copyTask[propertyName] = event.target.value;
     this.setState({
-      title: event.target.value,
+      currentTask: copyTask,
     });
-  };
-
-  handleChangeBody = (event) => {
-    this.setState({
-      body: event.target.value,
-    });
-  };
+  }
 
   render() {
     return (
       <div>
         <h3>Edit form</h3>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Title:</label>
+        <form onSubmit={this.handleFormSubmit} className="task-form">
+          <label className="label-form">Task:</label>
           <input
             type="text"
+            className="input-form"
             name="title"
-            value={this.state.title}
-            onChange={(event) => this.handleChangeTitle(event)}
+            value={this.state.currentTask.title}
+            onChange={(event) => this.handleChange(event, "title")}
           />
-          <label>Body:</label>
-          <textarea
+          <br />
+          <label className="label-form">Description:</label>
+          <input
+            type="text"
             name="body"
-            value={this.state.body}
-            onChange={(event) => this.handleChangeBody(event)}
+            className="input-form"
+            value={this.state.currentTask.body}
+            onChange={(event) => this.handleChange(event, "body")}
           />
-          <input type="submit" value="Submit" />
+          <br />
+          <input type="submit" value="SAVE" className="task-form-button" />
         </form>
       </div>
     );

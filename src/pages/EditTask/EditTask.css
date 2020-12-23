@@ -1,0 +1,23 @@
+.task-form {
+    display: flex;
+    flex-direction: column;
+    margin: 70px;
+    margin-bottom: 150px
+  }
+  
+  .input-form {
+    border: 1px solid #ffa45b;
+    padding: 10px;
+  }
+  
+  .label-form {
+    color: rgb(105, 104, 104);
+  }
+  
+  .task-form-button {
+    background-color: #f6f6f0;
+    font-size: 26px;
+    padding: 5px;
+    color: #ffa45b;
+    border: 1px solid #ffa45b;;
+  }
