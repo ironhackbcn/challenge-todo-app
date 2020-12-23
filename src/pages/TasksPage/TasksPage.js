@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TaskList from "../../components/TaskList/TaskList";
 import axios from "axios";
-import "./TasksPage.css"
+import "./TasksPage.css";
 
 class TasksPage extends Component {
   state = {
@@ -16,6 +16,10 @@ class TasksPage extends Component {
     });
   };
 
+  updateTaskStatus = (id, isDone) => {
+    console.log(id, isDone, "ID idDone");
+  };
+
   componentDidMount() {
     this.getAllTasks();
   }
@@ -24,7 +28,10 @@ class TasksPage extends Component {
     return (
       <div>
         <h1 className="home-title">What do I need to EAT?</h1>
-        <TaskList eachTask={this.state.listOfTasks} />
+        <TaskList
+          eachTask={this.state.listOfTasks}
+          updateTaskStatus={this.updateTaskStatus}
+        />
       </div>
     );
   }

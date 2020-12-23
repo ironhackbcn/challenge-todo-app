@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import TaskListItem from "./TaskListItem"
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import TaskListItem from "./TaskListItem";
 
 class TaskList extends Component {
   render() {
@@ -8,14 +7,16 @@ class TaskList extends Component {
       <ul>
         {this.props.eachTask.map((eachTask, index) => {
           return (
-            <Link key={eachTask._id} to={`todos/${eachTask._id}`}>
-              <TaskListItem key={index} oneItem={eachTask} />
-            </Link>
-          )
+            <TaskListItem
+              key={index}
+              oneItem={eachTask}
+              updateTaskStatus={this.props.updateTaskStatus}
+            />
+          );
         })}
       </ul>
-    )
+    );
   }
 }
 
-export default TaskList
+export default TaskList;

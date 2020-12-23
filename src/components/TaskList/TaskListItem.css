@@ -3,7 +3,10 @@
     margin: 25px;
     padding: 15px;
     display: flex;
-    flex-direction: column;
+ 
   }
-
+  .title-list {
+    margin-left: 10px;
+  }
+  
  
