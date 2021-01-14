@@ -1,0 +1,11 @@
+.todo-card {
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin: 20px auto;
+  width: 300px;
+  height: 150px;
+  text-align: center;
+  box-shadow: 4px 4px 5px 1px rgba(73, 84, 100, 0.5);
+  -webkit-box-shadow: 4px 4px 5px 1px rgba(73, 84, 100, 0.5);
+  -moz-box-shadow: 4px 4px 5px 1px rgba(73, 84, 100, 0.5);
+}
