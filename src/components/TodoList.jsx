@@ -4,7 +4,7 @@ import axios from "axios";
 function TodoList() {
   const [todosArray, setTodosArray] = useState([]);
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [body, setBody] = useState("");
 
   useEffect(() => {
     axios.get(`http://localhost:4000/api/v1/todos`).then((res) => {
@@ -15,18 +15,18 @@ function TodoList() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, description);
+    console.log(title, body);
     axios
       .post(`http://localhost:4000/api/v1/todos`, {
         title: title,
-        description: description,
+        body: body,
       })
       .then((res) => {
         setTodosArray([...todosArray, res.data]);
       })
       .catch((err) => console.log(err));
     setTitle("");
-    setDescription("");
+    setBody("");
   };
 
   const handleDelete = (e, id) => {
@@ -49,8 +49,8 @@ function TodoList() {
         />
         <input
           type="text"
-          name="todoDescription"
-          onChange={(e) => setDescription(e.target.value)}
+          name="tbody"
+          onChange={(e) => setBody(e.target.value)}
         />
         <button type="submit">Add Todo to List</button>
       </form>
@@ -59,6 +59,7 @@ function TodoList() {
         return (
           <div key={item._id}>
             <p>{item.title}</p>
+            <p>{item.body}</p>
             <p>{item._id}</p>
             <button onClick={(e) => handleDelete(e, item._id)}>
               delete me
