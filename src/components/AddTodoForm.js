@@ -5,7 +5,8 @@ class AddTodoForm extends Component {
 
     state = {
         title: "",
-        body: ""
+        body: "",
+        errMsg: ""
     }
 
     handleInput = (event) => {
@@ -25,7 +26,9 @@ class AddTodoForm extends Component {
                 this.emptyForm();
                 this.props.showAllTodos();
             })
-            .catch((err) => console.log(err)); //to display error msg on FE
+            .catch((err) => {
+                this.setState({errMsg: err.response.data.message})
+            }); 
     }
 
 
@@ -41,6 +44,9 @@ class AddTodoForm extends Component {
                 <textarea name="body" value={this.state.body} onChange={this.handleInput}></textarea>
                 <button type="submit">Save</button>
             </form>
+            {this.state.errMsg 
+            ? <div>{this.state.errMsg}</div>
+            : null}
         </>
         )
     }
