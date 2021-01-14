@@ -1,0 +1,23 @@
+body {
+  background: radial-gradient(
+    circle,
+    rgb(83, 53, 218) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+.list-item {
+  box-shadow: 3px 3px 5px rgba(175, 169, 169, 0.76);
+  width: 50%;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #92b7e8;
+}
+
+.fa-trash-alt {
+  font-size: 1.6rem;
+  background-color: #92b7e8;
+}
+.delete-button {
+  background-color: #92b7e8;
+  border: none;
+}
