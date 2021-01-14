@@ -25,7 +25,7 @@ class TodoList extends Component {
   render() {
     return (
       <div id="todo-list">
-        <AddTodo />
+        <AddTodo getAllTodos={this.getAllTodos}/>
         <div>
           {this.state.listOfTodos.map((todo) => {
             return (

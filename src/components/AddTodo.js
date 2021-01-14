@@ -14,8 +14,7 @@ class AddTodo extends Component {
 
         axios.post("http://localhost:4000/api/v1/todos", {title, body})
         .then ( () => {
-            //refresh todolist
-            //this.props.getData();
+            this.props.getAllTodos()
 
             this.setState({ thitle: "", body:""})
         })
