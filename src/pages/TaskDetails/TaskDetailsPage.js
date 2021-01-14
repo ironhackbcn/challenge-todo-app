@@ -6,7 +6,7 @@ class TaskDetailsPage extends Component {
     state = {
         TaskToDisplay: {},
         title: '',
-        description: ''
+        body: ''
     }
 
     componentDidMount() {
@@ -25,9 +25,9 @@ class TaskDetailsPage extends Component {
 
     handleUpdate = (e, id) => {
         e.preventDefault();
-        const {title, description} = this.state;
+        const {title, body} = this.state;
 
-        axios.put(`http://localhost:4000/api/v1/todos/${id}`, {title, description})
+        axios.put(`http://localhost:4000/api/v1/todos/${id}`, {title, body})
             .then( (newEntry) => {
                 this.props.history.push(`/`)
             })
@@ -49,9 +49,9 @@ class TaskDetailsPage extends Component {
 
                     <input
                         type="text"
-                        placeholder={this.state.TaskToDisplay.description}
-                        name="description"
-                        value={this.state.description}
+                        placeholder={this.state.TaskToDisplay.body}
+                        name="body"
+                        value={this.state.body}
                         onChange={this.handleChange}
                     />
 

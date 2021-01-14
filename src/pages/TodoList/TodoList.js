@@ -42,7 +42,7 @@ class TodoList extends Component {
                             <div key={listedItem._id}>
                             <Link to={`/details/${listedItem._id}`}>
                                 <h3>{listedItem.title}</h3>
-                                <h4>{listedItem.description}</h4>
+                                <h4>{listedItem.body}</h4>
                             </Link>
                             <button onClick={this.eraseTodoTask}>X</button>
                             </div>

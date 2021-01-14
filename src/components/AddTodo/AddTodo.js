@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class AddTodo extends Component {
     state = {
         title: '',
-        description: ''
+        body: ''
     }
 
     handleChange = (e) => {
@@ -17,9 +17,9 @@ class AddTodo extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const {title, description} = this.state;
+        const {title, body} = this.state;
 
-        axios.post('http://localhost:4000/api/v1/todos', {title, description})
+        axios.post('http://localhost:4000/api/v1/todos', {title, body})
             .then( (newEntry) => {
                 this.props.history.push(`/`)
             })
@@ -42,8 +42,8 @@ class AddTodo extends Component {
                         <input
                             type="text"
                             placeholder="Description"
-                            name="description"
-                            value={this.state.description}
+                            name="body"
+                            value={this.state.body}
                             onChange={this.handleChange}
                         />
 
