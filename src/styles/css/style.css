@@ -1,0 +1,91 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-list .create-todo-btn {
+  margin-bottom: 20px;
+}
+.todo-list .create-todo-form {
+  width: 30vw;
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-list .create-todo-form.open {
+  height: 120px;
+  border: #c6dff5 1px solid;
+  border-radius: 20px;
+  background-color: #c6dff5;
+  padding: 40px;
+}
+.todo-list .create-todo-form div {
+  margin-top: 20px;
+  width: 80%;
+}
+.todo-list .create-todo-form div label {
+  display: inline-block;
+  width: 30%;
+}
+.todo-list .create-todo-form div input {
+  width: 60%;
+}
+.todo-list .create-todo-form button {
+  margin-top: 10px;
+}
+.todo-list .todo-list-container {
+  width: 30vw;
+  border: #c6dff5 1px solid;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.todo-list .todo-list-container .todo-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-list .todo-list-container .todo-card .todo-info {
+  background-color: #ededed;
+  width: 80%;
+}
+.todo-list .todo-list-container .todo-card .buttons {
+  margin: 10px;
+  width: 80%;
+}
+.todo-list .todo-list-container .todo-card .buttons button {
+  margin: 5px;
+}
+.todo-list .todo-list-container .todo-card .form-container {
+  position: absolute;
+  display: none;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(211, 211, 211, 0.7);
+}
+.todo-list .todo-list-container .todo-card .form-container.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list .todo-list-container .todo-card .form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 20vh;
+  background-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
