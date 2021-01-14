@@ -23,6 +23,7 @@ class AddTodoForm extends Component {
         todoService.createTodo(title, body)
             .then(() => {
                 this.emptyForm();
+                this.props.showAllTodos();
             })
             .catch((err) => console.log(err)); //to display error msg on FE
     }

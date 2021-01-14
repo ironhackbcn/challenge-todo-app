@@ -12,16 +12,28 @@ class App extends Component {
     tasks: []
   }
 
-  componentDidMount() {
+  deleteTodo = (id) => {
+    todoService.deleteTodo(id)
+      .then(() => {
+        todoService.getAllTodos()
+          .then(response => this.setState({tasks: response.data}))
+      })
+  } 
+
+  showAllTodos = () => {
     todoService.getAllTodos()
       .then(response => this.setState({tasks: response.data}))
+  }
+
+  componentDidMount() {
+    this.showAllTodos();
   }
 
   render() {
     return (
       <div className="App">
-        <AddTodoForm/>
-        <TodoList tasks={this.state.tasks}/>
+        <AddTodoForm showAllTodos={this.showAllTodos}/>
+        <TodoList tasks={this.state.tasks} deleteTodo={this.deleteTodo}/>
       </div>
     );
   }

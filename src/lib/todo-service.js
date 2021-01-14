@@ -24,6 +24,12 @@ class TodoService {
         return pr;
     }
 
+    deleteTodo = (id) => {
+        // router.delete('/todos/:id', TodoController.deleteTodo);
+        const pr = this.api.delete(`/todos/${id}`);
+        return pr;
+    }
+
   
   }
   

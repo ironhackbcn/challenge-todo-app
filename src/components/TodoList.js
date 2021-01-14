@@ -7,7 +7,7 @@ function TodoList(props) {
 
     return (
         <div>
-            {tasks.map(task => {return <TodoCard task={task} key={task._id}/>})}
+            {tasks.map(task => {return <TodoCard task={task} key={task._id} deleteTodo={props.deleteTodo}/>})}
         </div>
     )
 }

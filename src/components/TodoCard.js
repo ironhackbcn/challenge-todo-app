@@ -27,12 +27,15 @@ class TodoCard extends Component {
                 const {title, body} = response.data;
                 this.setState({title: title, body: body, showEdit: false})
             })
+    }
 
+    deleteTodo = () => {
+        const id = this.props.task._id;
+        this.props.deleteTodo(id);
     }
 
     componentDidMount() {
         this.setState({title: this.props.task.title, body: this.props.task.body});
-
     }
 
     render() {
@@ -51,7 +54,7 @@ class TodoCard extends Component {
                 <h3>{this.state.title}</h3>
                 <p>{this.state.body}</p>
                 <button onClick={this.toggleEdit}>Edit</button>
-                <button>Delete</button>
+                <button onClick={this.deleteTodo}>Delete</button>
             </div>
         )
     }
