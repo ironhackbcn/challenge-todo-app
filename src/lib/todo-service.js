@@ -19,6 +19,11 @@ class TodoService {
         return pr;
     }
 
+    editTodo = (id, title, body) => {
+        const pr = this.api.put(`/todos/${id}`, {title, body})
+        return pr;
+    }
+
   
   }
   
