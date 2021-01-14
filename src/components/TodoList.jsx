@@ -15,7 +15,6 @@ function TodoList() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, body);
     axios
       .post(`http://localhost:4000/api/v1/todos`, {
         title: title,
@@ -44,12 +43,14 @@ function TodoList() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          name="todoTitle"
+          name="title"
+          value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
           type="text"
-          name="tbody"
+          name="body"
+          value={body}
           onChange={(e) => setBody(e.target.value)}
         />
         <button type="submit">Add Todo to List</button>
