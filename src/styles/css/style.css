@@ -1,7 +1,8 @@
 .todo-list {
-  display: flex;
+  display: flex;  
   flex-direction: column;
   align-items: center;
+  /* backgrouns */
 }
 .todo-list .create-todo-btn {
   margin-bottom: 20px;
