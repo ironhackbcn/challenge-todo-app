@@ -5,6 +5,7 @@ function TodoList() {
   const [todosArray, setTodosArray] = useState([]);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [showUpdate, setShowUpdate] = useState(false);
 
   useEffect(() => {
     axios.get(`http://localhost:4000/api/v1/todos`).then((res) => {
@@ -12,6 +13,11 @@ function TodoList() {
       setTodosArray(data);
     });
   }, []);
+
+  const toggleShowUpdate = (e) => {
+    e.preventDefault();
+    setShowUpdate(!showUpdate);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +32,21 @@ function TodoList() {
       .catch((err) => console.log(err));
     setTitle("");
     setBody("");
+  };
+
+  const handleUpdate = (e, id) => {
+    e.preventDefault();
+    axios
+      .put(`http://localhost:4000/api/v1/todos/${id}`, { title, body })
+      .then((res) => {
+        axios.get(`http://localhost:4000/api/v1/todos`).then((res) => {
+          let data = res.data;
+          setTodosArray(data);
+        });
+      });
+    setTitle("");
+    setBody("");
+    setShowUpdate(false);
   };
 
   const handleDelete = (e, id) => {
@@ -65,6 +86,24 @@ function TodoList() {
             <button onClick={(e) => handleDelete(e, item._id)}>
               delete me
             </button>
+            <button onClick={toggleShowUpdate}>Update</button>
+            {showUpdate ? (
+              <form onSubmit={(e) => handleUpdate(e, item._id)}>
+                <input
+                  type="text"
+                  name="title"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+                <input
+                  type="text"
+                  name="body"
+                  value={body}
+                  onChange={(e) => setBody(e.target.value)}
+                />
+                <button type="submit">update item</button>
+              </form>
+            ) : null}
           </div>
         );
       })}
