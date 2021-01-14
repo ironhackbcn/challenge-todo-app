@@ -13,11 +13,17 @@ class AddTodoForm extends Component {
         this.setState({[name]: value});
     }
 
+    emptyForm = () => {
+        this.setState({title: "", body: ""})
+    }
+
     handleSubmit = (event) => {
         event.preventDefault();
         const {title, body} = this.state;
         todoService.createTodo(title, body)
-            .then(response => {console.log('response, response.data', response, response.data)})
+            .then(() => {
+                this.emptyForm();
+            })
             .catch((err) => console.log(err)); //to display error msg on FE
     }
 
@@ -29,9 +35,9 @@ class AddTodoForm extends Component {
             <h2>Add New Task</h2>
             <form onSubmit={(e) => this.handleSubmit(e)}>
                 <label>Title:</label>
-                <input type="text" name="title" onChange={this.handleInput}></input>
+                <input type="text" name="title" value={this.state.title} onChange={this.handleInput}></input>
                 <label>Description:</label>
-                <textarea name="body" onChange={this.handleInput}></textarea>
+                <textarea name="body" value={this.state.body} onChange={this.handleInput}></textarea>
                 <button type="submit">Save</button>
             </form>
         </>

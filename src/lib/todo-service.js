@@ -14,6 +14,11 @@ class TodoService {
         return pr;
     }
 
+    getAllTodos = () => {
+        const pr = this.api.get('/todos');
+        return pr;
+    }
+
   
   }
   
