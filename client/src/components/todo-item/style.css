@@ -1,0 +1,20 @@
+.toDoItemBox {
+  background-color: #fff;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.toDoItem {
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
