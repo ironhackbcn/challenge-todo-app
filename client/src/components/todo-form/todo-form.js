@@ -13,6 +13,8 @@ class ToDoForm extends Component {
     event.preventDefault();
     const { user, title, body } = this.state;
     this.props.addItem(user, title, body);
+    user, title, (body = "");
+    this.setState({ user, title, body });
   };
 
   handleChange = (event) => {
