@@ -26,7 +26,6 @@ class TodoList extends Component {
     axios
       .delete(`http://localhost:4000/api/v1/todos/${todoId}`)
       .then((apiResponse) => {
-        console.log(apiResponse);
         this.getTodoList();
       })
       .catch((err) => console.log(err));
@@ -35,7 +34,6 @@ class TodoList extends Component {
   render() {
     const todoList = this.state.todoList;
     const newTodoItems = this.props.newTodoItems;
-    console.log(newTodoItems);
     return (
       <div className="todo-list">
         {todoList.map((todo) => {
