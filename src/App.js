@@ -1,25 +1,46 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import axios from "axios";
+import AddTask from "./components/AddTask";
+import Task from "./components/Task";
 
 class App extends Component {
+  state = {
+    myListArr: [],
+  };
+
+  componentDidMount() {
+    this.getTasks();
+  }
+
+  getTasks = () => {
+    axios
+      .get("http://localhost:4000/api/v1/todos")
+      .then((response) => {
+        const myListArr = response.data;
+        this.setState({ myListArr });
+      })
+      .catch((err) => console.log(err));
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <AddTask getTasks={this.getTasks} />
+        <section>
+          {this.state.myListArr && this.state.myListArr.length > 0 ? (
+            this.state.myListArr.map((task) => {
+              return (
+                <div>
+                  <Task getTasks={this.getTasks} task={task} />
+                </div>
+              );
+            })
+          ) : (
+            <p className="no-posts">You don't have any task, create one </p>
+          )}
+        </section>
       </div>
     );
   }
