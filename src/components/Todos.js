@@ -9,8 +9,9 @@ export default class Todos extends Component {
     render() {
         return (
             <div>
-            {/* <Link to "/create">Create Todo</Link> */}
-                TODOs
+                <Link to={"/create"}>Create Todo</Link>
+                <br /><br /><br />
+                <h1>My TODOs</h1>
                 {this.state.todosArr.map ((oneTodo)=>(
                     <Link key={oneTodo._id} to={`/todos/${oneTodo._id}`}>
                         <div className="one-todo">
