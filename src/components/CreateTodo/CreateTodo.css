@@ -1,0 +1,26 @@
+#create-todo {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 30px auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#create-todo > input {
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 3px;
+  height: 20px;
+  margin: 10px auto;
+  border: 1px solid lightgrey;
+}
+
+#create-todo > button {
+  width: 200px;
+  margin: 0 auto;
+  background-color: royalblue;
+  border-radius: 3px;
+  border: none;
+  height: 30px;
+}

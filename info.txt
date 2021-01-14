@@ -1,0 +1,5 @@
+Instructions to run the application:
+Once in the folders run `npm install` in the terminal
+
+To run the Client: `npm start`
+To run the Server: `npm run watch`
