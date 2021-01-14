@@ -61,7 +61,7 @@ class TodoDetails extends Component {
         <div>{this.renderEditForm()}</div>
         <button onClick={() => this.deleteTodo()}>Delete Todo</button>
         <br />
-        <Link to={"/projects"}>Back to the list</Link>
+        <Link to={"/todos"}>Back to the list</Link>
       </div>
     );
   }

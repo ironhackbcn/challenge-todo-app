@@ -21,16 +21,16 @@ class TodoList extends Component {
   componentDidMount() {
     this.getAllTodos();
   }
-  
+
   render() {
     return (
       <div id="todo-list">
-        <AddTodo getAllTodos={this.getAllTodos}/>
+        <AddTodo getAllTodos={this.getAllTodos} />
         <div>
           {this.state.listOfTodos.map((todo) => {
             return (
               <div className="todo" key={TodoList.id}>
-                <Link to={"/projects/" + todo._id}>
+                <Link to={"/todos/" + todo._id}>
                   <h3>{todo.title} </h3>
                   <p>{todo.body} </p>
                 </Link>
