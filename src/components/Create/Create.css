@@ -1,0 +1,21 @@
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+.create-form input {
+  padding: 10px;
+}
+.form-section {
+  width: 50%;
+  margin: 0 auto;
+}
+.form-button {
+  width: 20%;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+.edit-form-header {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px rgba(175, 169, 169, 0.76);
+}

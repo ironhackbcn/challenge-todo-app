@@ -1,0 +1,13 @@
+React Todo-list challenge
+
+- Fork and clone this repository.
+
+Run the following commands:
+
+    Client-side (challenge-todo-app):
+    npm install
+    npm start
+
+    Client-side (challenge-todo-api):
+    npm install
+    npm run watch
