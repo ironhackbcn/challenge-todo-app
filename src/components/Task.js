@@ -11,8 +11,6 @@ class Task extends Component {
     axios
       .delete(`http://localhost:4000/api/v1/todos/${this.props.task._id}`)
       .then((response) => {
-        console.log("reponse", response);
-        //this.props.history.push(`/myPosts/${userId}`);
         this.props.getTasks();
       })
       .catch((err) => console.log(err));

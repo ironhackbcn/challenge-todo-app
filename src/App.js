@@ -31,7 +31,7 @@ class App extends Component {
         <h3>Add a new task</h3>
         <AddTask getTasks={this.getTasks} />
         <section>
-        <h3>Your To-do list</h3>
+          <h3>Your To-do list</h3>
           {this.state.myListArr && this.state.myListArr.length > 0 ? (
             this.state.myListArr.map((task) => {
               return (
