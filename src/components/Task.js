@@ -21,7 +21,7 @@ class Task extends Component {
   render() {
     return (
       <div>
-        <h1>{this.props.task.title}</h1>
+        <h4>{this.props.task.title}</h4>
         <p>{this.props.task.body}</p>
         <button onClick={this.deleteHandler}>Delete</button>
       </div>
