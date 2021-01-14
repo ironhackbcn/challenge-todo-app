@@ -15,7 +15,7 @@ class AddTodoForm extends Component {
     }
 
     emptyForm = () => {
-        this.setState({title: "", body: ""})
+        this.setState({title: "", body: "", errMsg: ""})
     }
 
     handleSubmit = (event) => {
@@ -36,16 +36,16 @@ class AddTodoForm extends Component {
     render() {
         return (
             <>
-            <h2>Add New Task</h2>
-            <form onSubmit={(e) => this.handleSubmit(e)}>
-                <label>Title:</label>
-                <input type="text" name="title" value={this.state.title} onChange={this.handleInput}></input>
-                <label>Description:</label>
-                <textarea name="body" value={this.state.body} onChange={this.handleInput}></textarea>
-                <button type="submit">Save</button>
+            <form className="form" onSubmit={(e) => this.handleSubmit(e)}>
+                <h2>Add New Task</h2>
+                <label>Title:</label> <br/>
+                <input type="text" name="title" value={this.state.title} onChange={this.handleInput}></input> <br/>
+                <label>Description:</label> <br/>
+                <textarea name="body" value={this.state.body} onChange={this.handleInput}></textarea> <br/>
+                <button className="green-btn" type="submit">Save</button>
             </form>
             {this.state.errMsg 
-            ? <div>{this.state.errMsg}</div>
+            ? <div className="err-msg">{this.state.errMsg}</div>
             : null}
         </>
         )

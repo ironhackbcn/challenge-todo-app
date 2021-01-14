@@ -41,20 +41,20 @@ class TodoCard extends Component {
     render() {
         return (
             this.state.showEdit 
-            ? <form onSubmit={(e)=>this.submitEditForm(e)}>
-                <label>Title:</label>
-                <input type="text" name="title" value={this.state.title} onChange={this.handleInput}></input>
-                <label>Description:</label>
-                <textarea name="body" value={this.state.body} onChange={this.handleInput}></textarea>
-                <button type="submit">Save</button>
-                <button onClick={this.toggleEdit}>Cancel</button>
+            ? <form className="form" onSubmit={(e)=>this.submitEditForm(e)}>
+                <label>Title:</label> <br/>
+                <input type="text" name="title" value={this.state.title} onChange={this.handleInput}></input> <br/>
+                <label>Description:</label> <br/>
+                <textarea name="body" value={this.state.body} onChange={this.handleInput}></textarea> <br/>
+                <button  className="green-btn" type="submit">Save</button>
+                <button className="red-btn" onClick={this.toggleEdit}>Cancel</button>
             </form>
             : 
-            <div>
+            <div className="todo-card">
                 <h3>{this.state.title}</h3>
                 <p>{this.state.body}</p>
-                <button onClick={this.toggleEdit}>Edit</button>
-                <button onClick={this.deleteTodo}>Delete</button>
+                <button className="green-btn" onClick={this.toggleEdit}>Edit</button>
+                <button className="red-btn" onClick={this.deleteTodo}>Delete</button>
             </div>
         )
     }
