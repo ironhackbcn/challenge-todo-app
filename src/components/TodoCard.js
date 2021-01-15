@@ -13,6 +13,11 @@ class TodoCard extends Component {
         this.setState({showEdit: !this.state.showEdit})
     }
 
+    cancelEdit = () => {
+        this.setState({title: this.props.task.title, body: this.props.task.body});
+        this.toggleEdit();
+    }
+
     handleInput = (event) => {
         const {name, value} = event.target;
         this.setState({[name]: value});
@@ -47,7 +52,7 @@ class TodoCard extends Component {
                 <label>Description:</label> <br/>
                 <textarea name="body" value={this.state.body} onChange={this.handleInput}></textarea> <br/>
                 <button  className="green-btn" type="submit">Save</button>
-                <button className="red-btn" onClick={this.toggleEdit}>Cancel</button>
+                <button className="red-btn" onClick={this.cancelEdit}>Cancel</button>
             </form>
             : 
             <div className="todo-card">
