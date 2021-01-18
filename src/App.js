@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import AddTodoForm from './components/AddTodoForm';
+import TodoList from './components/TodoList';
+
+import todoService from './lib/todo-service';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    tasks: []
+  }
+
+  deleteTodo = (id) => {
+    todoService.deleteTodo(id)
+      .then(() => {
+        todoService.getAllTodos()
+          .then(response => this.setState({tasks: response.data}))
+      })
+  } 
+
+  showAllTodos = () => {
+    todoService.getAllTodos()
+      .then(response => this.setState({tasks: response.data}))
+  }
+
+  componentDidMount() {
+    this.showAllTodos();
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <AddTodoForm showAllTodos={this.showAllTodos}/>
+        <TodoList tasks={this.state.tasks} deleteTodo={this.deleteTodo}/>
       </div>
     );
   }
