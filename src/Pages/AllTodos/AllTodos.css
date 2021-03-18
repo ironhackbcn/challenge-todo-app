@@ -1,0 +1,21 @@
+.all-todos {
+  background-color: #8797b2;
+  height: 100vh;
+  color: white;
+}
+.all-todos h2 {
+  margin: 0;
+  padding-top: 50px;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.all-todos button {
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 80px;
+  font-weight: 700;
+  background-color: #f19f4d;
+  color: white;
+}

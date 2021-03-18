@@ -1,0 +1,13 @@
+.nav {
+  background-color: #8797b2;
+  display: flex;
+  justify-content: space-evenly;
+  height: 60px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
