@@ -1,3 +1,7 @@
+.mt30 {
+  margin-top:30px;
+}
+
 .App {
   text-align: center;
 }
@@ -22,6 +26,147 @@
 .App-link {
   color: #61dafb;
 }
+
+.navbar {
+  padding: 15px;
+  background-color: rgb(169, 208, 211);
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+
+}
+.navbar a{
+  list-style-type: none;
+  text-decoration: none;
+  color:black;
+  margin: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover{
+font-weight: bold;
+}
+
+h1{
+  font-size: 24px;
+  margin-top: 100px;
+}
+
+input {
+  padding: 5px;
+  width: 30%;
+  margin:10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 5px;
+  width: 30%;
+  margin:10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+label {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.btn {
+  width: 10%;
+  padding:5px 0px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color:rgb(131, 175, 179);
+  background-color: transparent;
+  border: 2px solid rgb(169, 208, 211);
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.btn-dark {
+  width: 10%;
+  padding:5px 0px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color:white;
+  background-color: rgb(131, 175, 179);
+  border: none;
+}
+
+.btn-dark:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.todoCard {
+  background-color: rgb(226, 243, 245);
+  width: 25%;
+  padding: 10px;
+  margin: 15px;
+}
+
+.container {
+  width: 100%;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+h4{
+  color:black;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.todoLink a{
+  text-decoration: none;
+}
+
+h5{
+  font-weight: 400;
+  font-size: 12px;
+  padding:0px 10px;
+  letter-spacing: 1px;
+}
+
+.todoDetail{
+  margin-top:50px;
+  width: 100%;
+}
+
+.all-containers{
+  width: 100%;
+  display: flex;
+}
+
+.container-left{
+  display:flex;
+  flex-direction: row;
+  width: 45%
+}
+
+.container-right{
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+}
+
 
 @keyframes App-logo-spin {
   from {
