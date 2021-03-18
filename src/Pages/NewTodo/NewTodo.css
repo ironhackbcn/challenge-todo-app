@@ -1,0 +1,34 @@
+.new-todo {
+  height: 100vh;
+  margin: 0;
+}
+
+.new-todo-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-todo h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.new-todo-form input {
+  background-color: #f0edea;
+  border: none;
+  border-radius: 10px;
+  height: 25px;
+  width: 220px;
+  margin-bottom: 15px;
+}
+
+.new-todo-form button {
+  border: none;
+  border-radius: 10px;
+  background-color: #f19f4d;
+  color: white;
+  height: 30px;
+  width: 70px;
+}

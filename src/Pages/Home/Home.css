@@ -1,0 +1,19 @@
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+.home button {
+  border: none;
+  border-radius: 10px;
+  background-color: #f19f4d;
+  color: white;
+  width: 120px;
+  height: 35px;
+  margin-top: 50px;
+}
